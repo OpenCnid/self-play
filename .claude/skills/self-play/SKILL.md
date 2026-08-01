@@ -19,9 +19,6 @@ description: >-
 
 # Self-Play
 
-> Self-play searches a space you have not solved. Isolation is what makes the
-> search return evidence instead of an echo.
-
 ## What this is — a search, not a checkup
 
 Self-play plays a design space against itself. You put up a candidate — a rubric,
@@ -106,7 +103,9 @@ The order is not cosmetic: each move closes a leak the previous one opened.
 Invariant: these five moves and the isolation each protects. Free: the domain,
 the ground, the players' selections, and the metric. Swap those and the same
 skeleton searches a water-chemistry claim, a comedy corpus, a codebase, or a
-flat-Earth argument.
+flat-Earth argument. Four such runs, with addresses, scope limits, and the three
+occasions the method withdrew its own findings:
+<https://github.com/OpenCnid/self-play/blob/main/docs/FINDINGS.md>.
 
 ## Across iterations — what the search actually selects
 
@@ -123,6 +122,18 @@ space, recorded.
 conditions that span it; the effect is below the floor and you have priced a
 sharper instrument; or the next variable costs more than the decision it would
 inform. Iterating with no stopping rule is how a search becomes a habit.
+
+## Before you author a player prompt
+
+Invoke `prompt-engineering` **and** `hypershot-protocol` via the Skill tool, then
+author against them (Guardrail 15). Confirm each body actually arrived — a
+`Skill` call that returned has not yet delivered anything (`harness-traps`
+§ *A loaded skill is not an applied one*). **Both must be installed, not merely
+readable as text:** invoking opens the gate, reading a vendored copy does not,
+and a vendored copy is derived rather than an authority over its source.
+
+Pinned dependencies, install commands, and what breaks without each:
+<https://github.com/OpenCnid/self-play/blob/main/docs/DEPENDENCIES.md>.
 
 ## The players — composed per context, isolated by construction
 
@@ -324,29 +335,3 @@ however blind the run that produced the items was.
   story. **Trusting the player** — confidence is not verification (discipline 8).
 - **Ceremony for its own sake** — if the answer is directly checkable, a clean
   room is theater. **A search stopped at one iteration** has mapped nothing.
-
-## Range
-
-The same skeleton ran unchanged against four targets sharing no content — a
-codebase audit, a design keystone, an external fact-corpus discrimination test,
-and a complexity-judging ceremony — by swapping only the ground and the players.
-When a target surprises you, adapt those; the skeleton and the isolation it
-protects are what stay.
-
-Four runs, one program: evidence the frame is domain-free, not proof. Addresses,
-scope limits, and the three occasions the method withdrew its own findings:
-<https://github.com/OpenCnid/self-play/blob/main/docs/FINDINGS.md>.
-
-## House note
-
-Guardrail 15 is house-wide: authoring player prompt bytes means invoking
-prompt-engineering **and** hypershot-protocol via the Skill tool first, then
-authoring against them. Confirm each body actually arrived — a `Skill` call that
-returns has not yet delivered anything (`harness-traps` § *A loaded skill is not
-an applied one*). **Both must be installed, not merely available as text:**
-invoking opens the gate, reading a vendored copy does not.
-
-Pinned copies of all six dependencies, install commands, provenance, and what
-breaks without each:
-<https://github.com/OpenCnid/self-play/blob/main/docs/DEPENDENCIES.md>. A
-vendored copy is derived and never an authority over its source.
