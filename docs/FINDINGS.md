@@ -3,11 +3,23 @@
 **Method distilled:** July 2026, from one program that ran it against four
 unrelated targets, plus the failures each cost.
 
-Every claim below carries its address. Addresses marked **⧉ origin** point into
-a private repository and **a stranger cannot open them** — they are recorded so
-the claim is falsifiable by whoever *can* open them, and so nobody mistakes an
-unopenable citation for a missing one. Nothing in this file depends on a reader
-resolving them; the substance is here.
+Every claim below carries its address, and **every address is a live link.** The
+originating repository is public at
+[OpenCnid/trellis](https://github.com/OpenCnid/trellis), and each citation is
+pinned to commit
+[`07bd744`](https://github.com/OpenCnid/trellis/tree/07bd7441e832aaa582a6d93e374c2e2334729830)
+so it resolves to the bytes the claim was written against rather than to whatever
+that file says later.
+
+**This is a correction.** An earlier version of this file marked these addresses
+`⧉ origin`, said they pointed into a private repository a stranger could not
+open, and recorded the consequence as a limit — a reader had to take the
+summaries on trust. An adversarial review attacked *"the substance is here"* as
+overstated on exactly that ground: the one operation discipline 8 demands,
+verifying against the bytes, was the one no reader could perform.
+
+The repository was public. The limit was mine rather than the world's, and the
+links are the repair. Go and check.
 
 The disciplines these runs bought are in
 [`.claude/skills/self-play/SKILL.md`](../.claude/skills/self-play/SKILL.md)
@@ -17,7 +29,7 @@ The disciplines these runs bought are in
 
 ## 1. A design keystone fell to an adversarial run — and the composer's own attack did not survive audit
 
-**⧉ origin** `docs/architecture/DOUBTS_WORKSPACE.md` §11, dated 2026-07-20.
+[`docs/architecture/DOUBTS_WORKSPACE.md` §11](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/docs/architecture/DOUBTS_WORKSPACE.md) — dated 2026-07-20.
 
 An isolated clean-context sub-agent was run over one document alone, with no
 access to the composer's reasoning, authorship, or expectations. Verdict:
@@ -65,8 +77,8 @@ named — a finding about the space, not a verdict on the candidate.
 
 ## 2. A blind evaluator rejected 13 of 14 flat-Earth arguments against a blind-built fact base
 
-**⧉ origin** `docs/architecture/DOUBTS_WORKSPACE.md` §12.1, dated 2026-07-20.
-Corpus retained at **⧉ origin** `fixtures/doubts_workspace/earth_figure_factbase.md`.
+[`docs/architecture/DOUBTS_WORKSPACE.md` §12.1](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/docs/architecture/DOUBTS_WORKSPACE.md) — dated 2026-07-20.
+Corpus retained at [`fixtures/doubts_workspace/earth_figure_factbase.md`](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/fixtures/doubts_workspace/earth_figure_factbase.md).
 
 The cleanest run in the record, and the one that shows why the ground must be
 built blind.
@@ -134,7 +146,7 @@ A citation test would have admitted most of these.
 
 ## 3. A codebase audit found real defects, and a later probe withdrew two of its own findings
 
-**⧉ origin** `docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md`,
+[`docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md`](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md) —
 recorded 2026-07-19; its withdrawals filed 2026-07-20.
 
 Six findings against an engine's encoding of a ratified record. The method then
@@ -188,8 +200,8 @@ were.
 
 ## 4. A composition ceremony was clean-room validated before it shipped
 
-**⧉ origin** `.claude/skills/complexity-convocation/VALIDATION.md`, dated
-2026-07-20. Eight sub-agent spawns, ≈407k sub-agent tokens.
+[`.claude/skills/complexity-convocation/VALIDATION.md`](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/.claude/skills/complexity-convocation/VALIDATION.md) —
+dated 2026-07-20. Eight sub-agent spawns, ≈407k sub-agent tokens.
 
 A full run of this skeleton against a real fixture, with the builder held out of
 both the ground-building and the scoring seats:

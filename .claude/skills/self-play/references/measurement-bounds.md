@@ -115,6 +115,11 @@ design rule; they are the same duty read from two ends.
 
 These bounds are the portable statement of house rules the origin repository
 carries as `.claude/rules/measurement-and-reporting.md` (rules 8, 11, 19(c) and
-20). That file is not part of this repository and a stranger cannot open it; the
-substance a self-play run depends on is restated here in full, and this file is
-what this skill cites.
+20). The substance a self-play run depends on is restated here in full, and this
+file is what the skill cites — so nothing here requires opening anything else.
+
+The source is public and pinned, if you want to check the restatement against it:
+<https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/.claude/rules/measurement-and-reporting.md>
+
+An earlier version of this file said that source could not be opened by anyone
+outside the originating repository. That was wrong.

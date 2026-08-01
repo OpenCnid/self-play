@@ -71,7 +71,7 @@ else that a stranger would need to install.
 | `prompt-engineering` | `87AD6993F587F094` | 5,907 | `~/.claude/skills/prompt-engineering/SKILL.md` | The Lexideck Prompt Engineering Curriculum (Matthew Murphy). The `SKILL.md` is the deployed artifact, not the curriculum. |
 | `hypershot-protocol` | `A97D26B654D3CE2B` | 11,265 | `~/.claude/skills/hypershot-protocol/SKILL.md` | Same Lexideck lineage. |
 | `subagent-composition` | `2F1BB2FAB87C08E8` | 17,538 | `~/.claude/skills/subagent-composition/SKILL.md` | `github.com/OpenCnid/subagent-composition` — **see the drift note below.** |
-| `judge-composition` | `6271CED312BE7276` | 24,334 | `~/.claude/skills/judge-composition/SKILL.md` | An origin-repository design record (`JUDGE_COMPOSITION_GAME.md`) that is not public. The vendored `SKILL.md` is the most authoritative copy a stranger can obtain. |
+| `judge-composition` | `6271CED312BE7276` | 24,334 | `~/.claude/skills/judge-composition/SKILL.md` | [OpenCnid/judge-composition](https://github.com/OpenCnid/judge-composition), which since 2026-07-31 ships all thirteen records it cites in its own `references/`. Its design record is public in [OpenCnid/trellis](https://github.com/OpenCnid/trellis). **The pin above is behind that**; see the note below. |
 | `harness-traps` | `5EEDC09973752A40` | 9,296 | `~/.claude/skills/harness-traps/SKILL.md` | This `SKILL.md`. |
 | `spark-steering` | `760C7DA9282AD2B3` | 5,613 | `~/.claude/skills/spark-steering/SKILL.md` | This `SKILL.md` plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
 
@@ -92,6 +92,20 @@ via `.gitattributes`, so its `SKILL.md` is ~246 bytes smaller than the CRLF copy
 pinned here and **the SHA-256 above will not match a fresh clone.** Compare
 content, not digests, across that boundary.
 
+### Pin note — `judge-composition` is behind
+
+The copy vendored here predates 2026-07-31, when the skill gained its own
+`references/` carrying all thirteen records it cites, byte-for-byte. The vendored
+`SKILL.md` is therefore ~150 bytes behind and, more importantly, its citations
+resolve to nothing from inside this repository while the upstream skill's resolve
+locally.
+
+**This is not regenerated here on purpose.** The maintained install path is
+[OpenCnid/dovetail](https://github.com/OpenCnid/dovetail), which pins the current
+skill as a submodule; the copies under `vendor/` are the record of what this
+skill was built and tested against, and rewriting that record to look current
+would defeat its only job.
+
 ### What was not vendored
 
 Only `SKILL.md` is vendored for each dependency, because that is the file
@@ -106,9 +120,14 @@ Only `SKILL.md` is vendored for each dependency, because that is the file
 
 ## Rules this skill depends on
 
-`SKILL.md` cites house rules that live in a private origin repository. Each was
-handled by restating the substance portably rather than by citing a path a
-stranger cannot open.
+`SKILL.md` cites house rules that live in the origin repository. Each is restated
+portably here so the skill stands alone — and **the origin repository is public**,
+at [OpenCnid/trellis](https://github.com/OpenCnid/trellis), pinned for these
+citations at
+[`07bd744`](https://github.com/OpenCnid/trellis/tree/07bd7441e832aaa582a6d93e374c2e2334729830).
+So each restatement below is checkable against its source rather than taken on
+trust. An earlier version of this table described that repository as private; it
+is not.
 
 | Rule | Where it was cited | Disposition here |
 |---|---|---|
