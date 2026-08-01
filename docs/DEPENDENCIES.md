@@ -1,0 +1,126 @@
+# Dependencies
+
+Every skill, rule, and record `SKILL.md` names, where its pinned copy came from,
+and what stops working without it.
+
+**Vendored copies are derived artifacts.** On any drift between a copy under
+`vendor/` and its source, the source wins and the copy is regenerated. A copy
+here is never an authority over the thing it was copied from, and a reader
+resolving a disputed claim goes to the source.
+
+Vendored 2026-07-31. Verify a copy with:
+
+```bash
+sha256sum vendor/<name>/SKILL.md
+```
+
+## Installing them
+
+**Reading a vendored copy does not open Guardrail 15; installing it does.** The
+gate is opened by *invoking* a skill, and a skill can only be invoked once it is
+in a skills directory. The vendored bytes are the same bytes — what changes is
+whether the harness can load them.
+
+The two hard requirements:
+
+```bash
+cp -r vendor/prompt-engineering  ~/.claude/skills/
+cp -r vendor/hypershot-protocol  ~/.claude/skills/
+```
+
+All six, if you want the skill's claims fully grounded:
+
+```bash
+cp -r vendor/*/ ~/.claude/skills/
+```
+
+Claude Code picks them up live, with no restart. Use `.claude/skills/` instead of
+`~/.claude/skills/` to install them per-project and commit them with a repo.
+
+**These are pinned copies, not upstream.** Where a dependency has a public home —
+`subagent-composition` does — prefer installing from there and treat the copy
+here as a fallback and a record of what this skill was built against.
+
+## The dependency set
+
+Read off `SKILL.md` by grep, not inherited from a list. Six skills, and nothing
+else that a stranger would need to install.
+
+| Skill | Role in this skill | What breaks without it |
+|---|---|---|
+| `prompt-engineering` | **Guardrail 15, hard.** Opens the gate for authoring player prompt bytes. | Player prompts get authored ungated. The skill's own § *House note* becomes a sentence the repository does not honour. |
+| `hypershot-protocol` | **Guardrail 15, hard.** The player prompt frame *is* a hypershot. | The frame reads as a template with odd naming instead of a contamination-control device, and filled-in examples creep back into player prompts — the exact leak the method exists to close. |
+| `subagent-composition` | The **spawn gate** (§ *When to use*) and the **isolation ledger** (§ *The players*). | Two load-bearing claims lose their grounding: that a spawn is the expensive path, and that your reasoning does not cross into a player unless you put it there. Without the second, isolation is an assumption rather than a mechanism. |
+| `judge-composition` | The clean-context principle this skill generalizes, and the source of the judging seats that score utility. | § *What this is* loses its lineage, and "judges score utility" has no composition method behind it. |
+| `harness-traps` | § *A loaded skill is not an applied one*, cited in § *House note*. | The gate degrades into a checklist tick — a `Skill` call that returned gets read as guidance that arrived. |
+| `spark-steering` | § *Ask first — the un-tool*, behind the "a held expectation goes to the collaborator" rule. | The ground-block rule names a destination for a held expectation and cannot say what that move is or why it precedes installing configuration. |
+
+## Pins
+
+| Skill | SHA-256 (first 16) | chars | Source path, 2026-07-31 | Canonical authority |
+|---|---|---|---|---|
+| `prompt-engineering` | `87AD6993F587F094` | 5,907 | `~/.claude/skills/prompt-engineering/SKILL.md` | The Lexideck Prompt Engineering Curriculum (Matthew Murphy). The `SKILL.md` is the deployed artifact, not the curriculum. |
+| `hypershot-protocol` | `A97D26B654D3CE2B` | 11,265 | `~/.claude/skills/hypershot-protocol/SKILL.md` | Same Lexideck lineage. |
+| `subagent-composition` | `2F1BB2FAB87C08E8` | 17,538 | `~/.claude/skills/subagent-composition/SKILL.md` | `github.com/OpenCnid/subagent-composition` — **see the drift note below.** |
+| `judge-composition` | `6271CED312BE7276` | 24,334 | `~/.claude/skills/judge-composition/SKILL.md` | An origin-repository design record (`JUDGE_COMPOSITION_GAME.md`) that is not public. The vendored `SKILL.md` is the most authoritative copy a stranger can obtain. |
+| `harness-traps` | `5EEDC09973752A40` | 9,296 | `~/.claude/skills/harness-traps/SKILL.md` | This `SKILL.md`. |
+| `spark-steering` | `760C7DA9282AD2B3` | 5,613 | `~/.claude/skills/spark-steering/SKILL.md` | This `SKILL.md` plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
+
+Full hashes are in [`vendor/HASHES.txt`](../vendor/HASHES.txt).
+
+### Drift note — `subagent-composition`
+
+The published repository at `github.com/OpenCnid/subagent-composition` (commit
+`06ad525`) carries a **13,548-byte** `SKILL.md`. The copy vendored here is
+**17,538 characters** and is ahead of it: the published version predates the
+§ *The disproving arm* section, added 2026-07-24.
+
+Nothing this skill cites from `subagent-composition` — the spawn gate and the
+isolation ledger — differs between the two. The pin is recorded so the
+discrepancy is visible rather than discovered, and **upstream is the source that
+wins once it is updated.** The correct repair is a push to that repository, not
+an edit here.
+
+### What was not vendored
+
+Only `SKILL.md` is vendored for each dependency, because that is the file
+`SKILL.md` cites. Three dependencies carry more:
+
+- `harness-traps/references/` — not vendored. The cited section is in the body.
+- `spark-steering/references/` — not vendored, including
+  `steer-1-levers.md` § *The un-tool*, which the body cites for the
+  construction and its provenance. The body carries enough to act on; a reader
+  wanting the derivation needs the source.
+- `judge-composition/README.md` — not vendored.
+
+## Rules this skill depends on
+
+`SKILL.md` cites house rules that live in a private origin repository. Each was
+handled by restating the substance portably rather than by citing a path a
+stranger cannot open.
+
+| Rule | Where it was cited | Disposition here |
+|---|---|---|
+| Measurement doctrine — instructions are specifications; a null needs a discriminating control; correctness is the whole score | § *When to use*, discipline 6, § *The cell that matters* | **Restated in full** at [`.claude/skills/self-play/references/measurement-bounds.md`](../.claude/skills/self-play/references/measurement-bounds.md). That file is what the skill cites. |
+| Guardrail 15 — the two protocols run before the bytes | § *House note* | **Restated in full** in [`AGENTS.md`](../AGENTS.md) § *Guardrail 15*. It is house-wide, so it binds work in this repository directly. |
+| The positive-control duty — *a null result is meaningless until the experiment has demonstrated it can produce a positive one* | discipline 6 | **Restated verbatim in the discipline itself.** The origin citation is dropped; the sentence is load-bearing and now travels with the rule that uses it. |
+| Ask-the-collaborator — put an underdetermined call to the collaborator rather than settling it with standing configuration | § *The `## Ground` block* | **Restated in full** in the section, with the reason attached. Also carried in [`AGENTS.md`](../AGENTS.md). |
+
+## Records that stayed behind
+
+Two auto-memory entries were cited by the origin `SKILL.md`:
+`project-corrosion-bound-critique` and `feedback-encoding-tracks-presentation`.
+
+These are **unportable by construction and are not carried forward.** Auto-memory
+does not cross the sub-agent boundary (see `vendor/subagent-composition/SKILL.md`
+§ *The inheritance ledger*), so they were never available to a player in the
+first place, and they are not available to anyone outside the machine that holds
+them. The findings they recorded are written up with their addresses in
+[`FINDINGS.md`](FINDINGS.md).
+
+## A rule the origin skill did not cite
+
+The origin repository's `composed-evaluators.md` (rule 17) appears in this
+repository's build hand-off as a rule the skill depends on. Grepping the origin
+`SKILL.md` for it returns nothing: the skill never cited it. It is therefore not
+a dependency and nothing here restates it.

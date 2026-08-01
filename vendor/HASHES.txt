@@ -1,0 +1,9 @@
+# Vendored dependency pins — self-play
+# Generated 2026-07-31. Verify with: sha256sum vendor/<name>/SKILL.md
+
+5eedc09973752a40abcd7c5154d3879e783165685c69fd5079267d202d8da3d9  vendor/harness-traps/SKILL.md
+a97d26b654d3ce2bada2c37280ba83fa3818f98b2a5d43dcdd7b88896d315d83  vendor/hypershot-protocol/SKILL.md
+6271ced312be7276d4539cd7d1ef58ddf0ae2e47177a91b30780e9c725ce4660  vendor/judge-composition/SKILL.md
+87ad6993f587f0949d45eb0138e1a4071186bc3016160ea8c82ef03b2e1df70a  vendor/prompt-engineering/SKILL.md
+760c7da9282ad2b35a75715c3dc299751c4b2b62561c17abdbf0868091197c27  vendor/spark-steering/SKILL.md
+2f1bb2fab87c08e889d95b248ef9ccab811d42b530169a54ca51bf236ee1f079  vendor/subagent-composition/SKILL.md

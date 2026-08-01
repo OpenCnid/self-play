@@ -1,0 +1,63 @@
+self-play
+Copyright 2026 OpenCnid Labs
+
+This repository's own prose and skill are licensed CC BY 4.0; see LICENSE.md.
+
+--------------------------------------------------------------------------------
+METHOD ATTRIBUTION
+--------------------------------------------------------------------------------
+
+The prompt-engineering toolkit, the hypershot technique, and the framing of
+self-play as an AlphaGo-shaped search over text are the work of Matthew Murphy
+(https://github.com/gusthemole), published as the Lexideck prompt engineering
+curriculum. This repository applies that method to clean-room evaluation of
+LLM-assisted features and records what running it produced. The method is his;
+the application and the record are ours.
+
+--------------------------------------------------------------------------------
+REDISTRIBUTED WORKS
+--------------------------------------------------------------------------------
+
+vendor/ contains verbatim, unmodified copies of six sibling skills, pinned by
+SHA-256 in vendor/HASHES.txt and dated 2026-07-31. They are redistributed so
+this skill reads correctly to someone who has never seen the repositories they
+came from. Each carries its own authorship:
+
+  vendor/prompt-engineering/SKILL.md
+      The Lexideck prompt-engineering protocol. Canonical authority: the
+      Lexideck Prompt Engineering Curriculum (Matthew Murphy). The vendored
+      SKILL.md is the deployed artifact, not the curriculum.
+
+  vendor/hypershot-protocol/SKILL.md
+      Same Lexideck lineage.
+
+  vendor/subagent-composition/SKILL.md
+      OpenCnid Labs. Canonical authority:
+      https://github.com/OpenCnid/subagent-composition
+      The vendored copy is AHEAD of that repository's published version; see
+      the drift note in docs/DEPENDENCIES.md. Upstream is the source that wins
+      once it is updated.
+
+  vendor/judge-composition/SKILL.md
+      OpenCnid Labs. Its canonical authority is a design record that is not
+      public; the vendored SKILL.md is the most authoritative copy a reader
+      outside that repository can obtain.
+
+  vendor/harness-traps/SKILL.md
+      OpenCnid Labs. This SKILL.md is its own canonical form.
+
+  vendor/spark-steering/SKILL.md
+      OpenCnid Labs. Canonical form is this SKILL.md plus a references/
+      directory that is NOT vendored here.
+
+A vendored copy is a derived artifact and never an authority over its source.
+On any drift, the source wins and the copy is regenerated — never the reverse.
+
+--------------------------------------------------------------------------------
+NOT AFFILIATED
+--------------------------------------------------------------------------------
+
+The Claude Code sub-agent mechanics exercised by probes/ are Anthropic, PBC
+product behavior, documented at https://code.claude.com/docs/en/sub-agents.
+This project is not affiliated with, endorsed by, or supported by Anthropic. Do
+not report issues with this project to Anthropic.
