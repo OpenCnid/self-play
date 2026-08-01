@@ -121,6 +121,15 @@ noise.
 | **T3** | Zero unmarked broken references; every vendored hash matches | **PASS.** 34 internal link targets across 12 files resolved; all six SHA-256 digests matched; five `⧉ origin` markers recorded as correct-by-design. One soft break found (a `§` pointer to a non-existent heading) and fixed. |
 | **T4** | `SKILL.md` under 19,900 characters | **PASS, barely — 19,879, headroom 21.** Recorded as marginal rather than as met: the body is at its ceiling and the next addition needs a matching removal. |
 
+*The figures in T3 and T4 are what was measured on the date of this run and are
+left as recorded. Two have since moved, and neither movement is a correction to
+this table: on 2026-08-01 the body was cut to **19,277 characters, headroom 623**,
+and the six vendored digests were regenerated over LF content — the versions this
+run matched had been computed against CRLF working copies and would not have
+verified on a fresh clone. Current values live in
+[`DEPENDENCIES.md`](DEPENDENCIES.md) and `vendor/HASHES.txt`, which are the
+maintained records; this one is a dated result and stays put.*
+
 ### Predictions — scored, including the two I got wrong
 
 | # | Prediction | Outcome |

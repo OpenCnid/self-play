@@ -1,9 +1,15 @@
 # Vendored dependency pins — self-play
-# Generated 2026-07-31. Verify with: sha256sum vendor/<name>/SKILL.md
-
-5eedc09973752a40abcd7c5154d3879e783165685c69fd5079267d202d8da3d9  vendor/harness-traps/SKILL.md
-a97d26b654d3ce2bada2c37280ba83fa3818f98b2a5d43dcdd7b88896d315d83  vendor/hypershot-protocol/SKILL.md
-6271ced312be7276d4539cd7d1ef58ddf0ae2e47177a91b30780e9c725ce4660  vendor/judge-composition/SKILL.md
-87ad6993f587f0949d45eb0138e1a4071186bc3016160ea8c82ef03b2e1df70a  vendor/prompt-engineering/SKILL.md
-760c7da9282ad2b35a75715c3dc299751c4b2b62561c17abdbf0868091197c27  vendor/spark-steering/SKILL.md
-2f1bb2fab87c08e889d95b248ef9ccab811d42b530169a54ca51bf236ee1f079  vendor/subagent-composition/SKILL.md
+#
+# Regenerated 2026-08-01. Verify with:
+#     sha256sum -c vendor/HASHES.txt
+#
+# Hashes are over LF content, which is what .gitattributes (eol=lf) checks
+# out on every platform — so these verify on a fresh clone anywhere. An
+# earlier generation recorded them against CRLF working copies on Windows;
+# five of the six then failed verification on any clean checkout.
+5eedc09973752a40abcd7c5154d3879e783165685c69fd5079267d202d8da3d9 *vendor/harness-traps/SKILL.md
+981bd9b0d92daf8b9c8c273bfe9ade7f9b225fc6afa7f14af4fdf1a0ff1868a0 *vendor/hypershot-protocol/SKILL.md
+3e563072eb5695aa8dfdbd05375a3bc7bb555ef2a69daac35db03b4d44b5f5cf *vendor/judge-composition/SKILL.md
+d6f1bbcad32693bc73f44d5db3152350aee025f79c553ed2aa4fcfa2cc9209aa *vendor/prompt-engineering/SKILL.md
+d7260526991a98eba872cdc2b6b69b52c8e75be2f7f8246985193657eacaeff5 *vendor/spark-steering/SKILL.md
+d6caff44ba55791a69ec7d7d233519bde3fb39eab97988217fa2c763b9bfc16e *vendor/subagent-composition/SKILL.md

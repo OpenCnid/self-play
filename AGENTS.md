@@ -103,12 +103,11 @@ attestation does not reach back and open it.
   ```
 
   `newline=''` matters: Python's default translates `\r\n` to `\n` and undercounts
-  a CRLF file. This repository normalises to LF via `.gitattributes` so the two
-  agree here, but the vendored copies are CRLF in a Windows working tree and the
-  `chars` column in [docs/DEPENDENCIES.md](docs/DEPENDENCIES.md) counts line
-  endings as written. Use the strict count everywhere so one convention governs.
+  a CRLF file. This repository normalises to LF via `.gitattributes`, and since
+  2026-08-01 the vendored copies are LF too, so every count and digest agrees on
+  every platform. Use the strict count everywhere so one convention governs.
 
-  **`SKILL.md` currently sits at 19,879 of 19,900 — 21 characters of headroom.**
+  **`SKILL.md` currently sits at 19,277 of 19,900 — 623 characters of headroom.**
   Any addition needs a matching removal, and material belongs in `references/`,
   which is never truncated.
 

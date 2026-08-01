@@ -66,16 +66,30 @@ else that a stranger would need to install.
 
 ## Pins
 
-| Skill | SHA-256 (first 16) | chars | Source path, 2026-07-31 | Canonical authority |
+| Skill | SHA-256 (first 16) | chars | Vendored copy | Canonical authority |
 |---|---|---|---|---|
-| `prompt-engineering` | `87AD6993F587F094` | 5,907 | `~/.claude/skills/prompt-engineering/SKILL.md` | The Lexideck Prompt Engineering Curriculum (Matthew Murphy). The `SKILL.md` is the deployed artifact, not the curriculum. |
-| `hypershot-protocol` | `A97D26B654D3CE2B` | 11,265 | `~/.claude/skills/hypershot-protocol/SKILL.md` | Same Lexideck lineage. |
-| `subagent-composition` | `2F1BB2FAB87C08E8` | 17,538 | `~/.claude/skills/subagent-composition/SKILL.md` | `github.com/OpenCnid/subagent-composition` — **see the drift note below.** |
-| `judge-composition` | `6271CED312BE7276` | 24,334 | `~/.claude/skills/judge-composition/SKILL.md` | [OpenCnid/judge-composition](https://github.com/OpenCnid/judge-composition), which since 2026-07-31 ships all thirteen records it cites in its own `references/` and is **canonical for its own skill and for those mirrored records**. Its design record originated in a now-deprecated repository; the mirrors **in `judge-composition` itself** are what remain of it. **The pin above is behind that**; see the note below. |
-| `harness-traps` | `5EEDC09973752A40` | 9,296 | `~/.claude/skills/harness-traps/SKILL.md` | This `SKILL.md`. |
-| `spark-steering` | `760C7DA9282AD2B3` | 5,613 | `~/.claude/skills/spark-steering/SKILL.md` | This `SKILL.md` plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
+| `prompt-engineering` | `D6F1BBCAD32693BC` | 5,805 | [`vendor/prompt-engineering/SKILL.md`](../vendor/prompt-engineering/SKILL.md) | The Lexideck Prompt Engineering Curriculum (Matthew Murphy). The `SKILL.md` is the deployed artifact, not the curriculum. |
+| `hypershot-protocol` | `981BD9B0D92DAF8B` | 11,106 | [`vendor/hypershot-protocol/SKILL.md`](../vendor/hypershot-protocol/SKILL.md) | Same Lexideck lineage. |
+| `subagent-composition` | `D6CAFF44BA55791A` | 16,967 | [`vendor/subagent-composition/SKILL.md`](../vendor/subagent-composition/SKILL.md) | [OpenCnid/subagent-composition](https://github.com/OpenCnid/subagent-composition) at `1b9ffd5`. |
+| `judge-composition` | `3E563072EB5695AA` | 19,326 | [`vendor/judge-composition/SKILL.md`](../vendor/judge-composition/SKILL.md) | [OpenCnid/judge-composition](https://github.com/OpenCnid/judge-composition) at `de7446d`, which ships all thirteen records it cites in its own `references/` and is **canonical for its own skill and for those mirrored records**. Its design record originated in a now-deprecated repository; the mirrors **in `judge-composition` itself** are what remain of it. |
+| `harness-traps` | `5EEDC09973752A40` | 9,296 | [`vendor/harness-traps/SKILL.md`](../vendor/harness-traps/SKILL.md) | [OpenCnid/harness-traps](https://github.com/OpenCnid/harness-traps) at `fb0456e`. |
+| `spark-steering` | `D7260526991A98EB` | 5,537 | [`vendor/spark-steering/SKILL.md`](../vendor/spark-steering/SKILL.md) | [OpenCnid/spark-steering](https://github.com/OpenCnid/spark-steering) at `67cb3b6`, plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
 
-Full hashes are in [`vendor/HASHES.txt`](../vendor/HASHES.txt).
+Full hashes are in [`vendor/HASHES.txt`](../vendor/HASHES.txt), verifiable with
+`sha256sum -c vendor/HASHES.txt`.
+
+**Refreshed 2026-08-01, and two things were wrong before it.** The
+`judge-composition` and `subagent-composition` copies were stale — both skills
+had been rewritten the same day and the pins still described the previous bodies.
+And **five of the six recorded hashes did not verify on a fresh clone**: they had
+been computed against CRLF working copies on Windows, while `.gitattributes`
+(`eol=lf`) checks the files out as LF everywhere, so `sha256sum` on a clean
+checkout produced six different digests and the manifest's own verify instruction
+failed. Every hash above is now over LF content and checks out on any platform.
+
+The vendored copies are derived artifacts. On any divergence the source
+repository named in the last column wins and the copy here is regenerated —
+never the reverse.
 
 ### Drift note — `subagent-composition` — **RESOLVED 2026-07-31**
 
@@ -87,24 +101,39 @@ behind the copy vendored here: it predated the § *The disproving arm* section.
 and `main` carries it at `c5ab4fa`. The repair went to the source rather than to
 this copy, which is the direction the rule requires.
 
-One residual difference is expected and is not drift: upstream normalises to LF
-via `.gitattributes`, so its `SKILL.md` is ~246 bytes smaller than the CRLF copy
-pinned here and **the SHA-256 above will not match a fresh clone.** Compare
-content, not digests, across that boundary.
+*This note previously warned that the vendored copy was CRLF while upstream
+normalises to LF, so the recorded SHA-256 would not match a fresh clone and
+readers should compare content rather than digests.* **That is fixed rather than
+still true.** Every vendored copy is LF, matching what `.gitattributes` checks
+out on any platform, and the digests in `vendor/HASHES.txt` now verify with
+`sha256sum -c` on a clean checkout anywhere.
 
-### Pin note — `judge-composition` is behind
+### Pin note — the copies are refreshed, and the policy changed to say so
 
-The copy vendored here predates 2026-07-31, when the skill gained its own
-`references/` carrying all thirteen records it cites, byte-for-byte. The vendored
-`SKILL.md` is therefore ~150 bytes behind and, more importantly, its citations
-resolve to nothing from inside this repository while the upstream skill's resolve
-locally.
+**Superseded 2026-08-01, at owner instruction.** This section previously read:
 
-**This is not regenerated here on purpose.** The maintained install path is
-[OpenCnid/dovetail](https://github.com/OpenCnid/dovetail), which pins the current
-skill as a submodule; the copies under `vendor/` are the record of what this
-skill was built and tested against, and rewriting that record to look current
-would defeat its only job.
+> **This is not regenerated here on purpose.** The maintained install path is
+> [OpenCnid/dovetail](https://github.com/OpenCnid/dovetail), which pins the
+> current skill as a submodule; the copies under `vendor/` are the record of what
+> this skill was built and tested against, and rewriting that record to look
+> current would defeat its only job.
+
+That reading is retired. It also contradicted [`AGENTS.md`](../AGENTS.md), which
+states the rule the other way — vendored copies are derived, and on drift the
+source wins and the copy is regenerated. Two rules in one repository pointing
+opposite ways is worse than either rule alone, and the one that survives is the
+one the rest of the house follows.
+
+**The copies under `vendor/` now track their sources.** They are a convenience
+snapshot so a reader can see what each named dependency says without installing
+it — not an authority, and not a historical record. What this skill was built and
+tested against is recorded where evidence belongs: in
+[`FINDINGS.md`](FINDINGS.md) and [`VALIDATION.md`](VALIDATION.md), with commits
+and addresses, which is a better record than a frozen file copy because it says
+*when* and *what changed*.
+
+Regenerate with the source repositories checked out beside this one, then rerun
+`sha256sum` and update the table above and `vendor/HASHES.txt` together.
 
 ### What was not vendored
 
