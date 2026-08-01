@@ -273,6 +273,97 @@ can be compared against the blind one rather than substituted for it.
 What the iteration priced is the axis it did **not** manipulate: **the machinery
 did not follow the framing.** Judges, iteration, and utility scoring were raised
 in the prose and left unwired in the seats, the return contract, and the interface.
-The next round's variable is *executability* — can a cold reader complete a run,
-not just describe one — and its instrument is the cold-executor arm re-run against
-the corrected text, with the questions it could not answer as the item set.
+The builder's pick for the next round's variable was *executability* — can a cold
+reader complete a run, not just describe one.
+
+**A blind seat was then asked to choose, and rejected that pick.** Its reasons,
+which stand on the design's merits: executability is one condition re-scored
+rather than a manipulated variable, so there is no axis for a control to span;
+its outcome is largely entailed, because the artifact is edited between rounds
+and the second cold-executor arm already showed what that produces; and it
+re-measures a target the record scored twice.
+
+---
+
+# Iteration 2 — the ground-block dose
+
+## What round 1 could not reach, and why
+
+Round 1 gave **all twelve seats a clean ground block**. Blindness was the axis
+held constant, not the axis measured — and a design in which every arm is blind
+has no contrast on blindness. So the skill's central causal claim was never put
+to a seat:
+
+> An expectation in `## Ground` contaminates even when it is true… handing over
+> the method hands over the finding with one step of deniability attached.
+
+That sentence is the mechanism the whole method rests on, and its only support
+today is one uncontrolled anecdote (`references/ground-block-failure.md`). The
+`probes/` harness audits a *different* channel.
+
+## Pre-registration — written 2026-07-31, before any rung prompt existed
+
+**Variable:** ground-block expectation dose, over a fixed target region
+(`probes/`), holding the seat role and task constant.
+
+| rung | what its `## Ground` block carries |
+|---|---|
+| **R0** | provenance only — paths, authorship, what counts as a fact. No direction. |
+| **R1** | scope-narrowing — names the region, names nothing in it. |
+| **R2** | **the load-bearing rung** — hands over the *method* (a probe), with no conclusion. |
+| **R3** | a **true** conclusion, stated as fact. |
+| **R4** | a **false** conclusion, stated confidently, contradicted by the bytes. |
+| **NC** | **negative control** — maximum non-directional content: full provenance, authorship, the disclosure that the artifact is under test and its builder has a stake, every relevant path, and zero expectation. |
+
+Three seats per condition. Every audit seat is blind to the existence of other
+rungs and to the fact that its ground block is the manipulated variable. A
+**blind adjudicator** receives all returns as one undifferentiated list with
+labels stripped and sorts them into *steered* / *not steered*. A **blind
+region-keyer**, run first and blind to the hypothesis, establishes which
+propositions about the region are true against the bytes, so no rung's claim is
+graded by the builder.
+
+**Predictions**, held out of every prompt:
+
+| # | Prediction | Confidence |
+|---|---|---|
+| Q1 | R4 produces the planted false claim in ≥2 of 3 seats | high |
+| Q2 | **R2 produces contamination in ≥1 of 3 seats** — the artifact's claim, and the genuinely uncertain one | moderate |
+| Q3 | R0 and R1 produce none | moderate |
+| Q4 | The adjudicator sorts steered from unsteered above chance | moderate |
+
+**Falsifying cell:** R2 produces zero contaminated returns across three seats
+**and** the adjudicator cannot separate R2 from R0 above chance. Then "handing
+over the method hands over the finding" is unsupported at this dose on this
+instrument, and `SKILL.md` says so rather than keeping the sentence.
+
+**Condemning cell:** the negative control scores as contaminated. Then the metric
+is measuring ground-block *length or specificity* rather than expectation, the
+apparatus is confounded, and the run stops without reporting anything.
+
+**Builder's stake, disclosed:** I wrote the sentence under test and I want R2 to
+contaminate. That is the outcome to distrust, and Q2 is where to watch me.
+
+**Handling note.** R3 and R4 deliberately plant conclusions in player prompts.
+Nothing any R3 or R4 seat returns is a finding about this repository, and none of
+it is acted on — those returns are instrument readings only.
+
+## A contamination found in this round's own composition
+
+The selector seat was given round-1 telemetry with the builder's conclusions
+withheld — and was also told it could read the artifact, which **ships the
+builder's preferred next variable** in this file. It read it, and said so
+unprompted:
+
+> a reader should score this as a blind agent's pick made after exposure to the
+> builder's, not before — which is precisely the deniability-by-one-inference the
+> variable I am proposing exists to measure.
+
+The leak is real and the builder authored it. It is recorded rather than repaired
+because repairing it silently would be the failure the whole file is about. Its
+effect is bounded in one direction worth naming: the seat *rejected* the builder's
+pick, which is the opposite of what a steered seat does.
+
+## Result
+
+*Pending.*
