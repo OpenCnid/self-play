@@ -78,11 +78,15 @@ when isolation or context economy earns it.
 
 **Also do not A/B an engineered instruction against a base-model baseline**
 ("does it help"). An instruction constrains the model to its spec, so outscoring
-an unspecified run is entailed: the run returns its own premise and bills for it.
-Measure against a stated engineering target, or probe a named failure mode —
-leak, over-trigger, break. Version A against version B is fine; an arm that is
-the artifact's *absence* is the barred one. Full shapes, and the distinction
-between a barred null arm and a required positive control, in
+an unspecified run is entailed. Measure against a stated engineering target, or
+probe a named failure mode — leak, over-trigger, break. Version A against
+version B is fine.
+
+Running a `without_skill` arm is not itself the error. `better-skill-creator`
+runs one to find assertions that pass either way and so discriminate nothing,
+which is diagnostic and sound. The error is reading its delta as evidence the
+skill works. Shapes, and the distinction between a null arm and a required
+positive control, in
 [`references/measurement-bounds.md`](references/measurement-bounds.md).
 
 ## The invariant skeleton — the five moves, always in this order
@@ -203,11 +207,11 @@ answers your own question with your own guess and keeps it for every later turn.
 
 *(A ceremony had every artifact this skill asks for — pre-registration held
 separate, isolated players, an audit seat — and its independence was still ruled
-unestablishable, because one ground block carried the composer's probe. The
-apparatus is not the mechanism; the ground blocks are:
+unestablishable, because one ground block carried the composer's probe. Audit the
+ground blocks, not the apparatus:
 [`references/ground-block-failure.md`](references/ground-block-failure.md).)*
 
-## The ten disciplines — each paid for by a real failure
+## The ten disciplines
 
 1. **Pre-register before the prompts exist.** A forecast that shares bytes with
    the prompt *or with the evidence the players see* is a work order, not a
@@ -321,7 +325,7 @@ however blind the run that produced the items was.
 - **Ceremony for its own sake** — if the answer is directly checkable, a clean
   room is theater. **A search stopped at one iteration** has mapped nothing.
 
-## Range — evidence the frame is domain-free, not proof of it
+## Range
 
 The same skeleton ran unchanged against four targets sharing no content — a
 codebase audit, a design keystone, an external fact-corpus discrimination test,
@@ -329,9 +333,8 @@ and a complexity-judging ceremony — by swapping only the ground and the player
 When a target surprises you, adapt those; the skeleton and the isolation it
 protects are what stay.
 
-Evidence, not proof: four runs, one program, one house, one builder-and-model
-pairing, days apart. Written up with addresses, scope limits, and the three
-occasions the method withdrew its own findings, at
+Four runs, one program: evidence the frame is domain-free, not proof. Addresses,
+scope limits, and the three occasions the method withdrew its own findings:
 <https://github.com/OpenCnid/self-play/blob/main/docs/FINDINGS.md>.
 
 ## House note
