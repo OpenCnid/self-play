@@ -16,6 +16,15 @@ sha256sum vendor/<name>/SKILL.md
 
 ## Installing them
 
+**The maintained way to install this skill and all six dependencies at once is
+[OpenCnid/dovetail](https://github.com/OpenCnid/dovetail)** — a pack that holds
+each of them as a git submodule pinned to a commit, with no copies at all. Every
+dependency now has its own public repository, which the pack pins and this
+document records.
+
+The commands below remain the fallback for installing from this repository
+alone.
+
 **Reading a vendored copy does not open Guardrail 15; installing it does.** The
 gate is opened by *invoking* a skill, and a skill can only be invoked once it is
 in a skills directory. The vendored bytes are the same bytes — what changes is
@@ -68,18 +77,20 @@ else that a stranger would need to install.
 
 Full hashes are in [`vendor/HASHES.txt`](../vendor/HASHES.txt).
 
-### Drift note — `subagent-composition`
+### Drift note — `subagent-composition` — **RESOLVED 2026-07-31**
 
-The published repository at `github.com/OpenCnid/subagent-composition` (commit
-`06ad525`) carries a **13,548-byte** `SKILL.md`. The copy vendored here is
-**17,538 characters** and is ahead of it: the published version predates the
-§ *The disproving arm* section, added 2026-07-24.
+The published repository carried a 13,548-byte `SKILL.md` at commit `06ad525`,
+behind the copy vendored here: it predated the § *The disproving arm* section.
 
-Nothing this skill cites from `subagent-composition` — the spawn gate and the
-isolation ledger — differs between the two. The pin is recorded so the
-discrepancy is visible rather than discovered, and **upstream is the source that
-wins once it is updated.** The correct repair is a push to that repository, not
-an edit here.
+**Upstream is now level.** The content was ported and merged as
+[OpenCnid/subagent-composition#1](https://github.com/OpenCnid/subagent-composition/pull/1),
+and `main` carries it at `c5ab4fa`. The repair went to the source rather than to
+this copy, which is the direction the rule requires.
+
+One residual difference is expected and is not drift: upstream normalises to LF
+via `.gitattributes`, so its `SKILL.md` is ~246 bytes smaller than the CRLF copy
+pinned here and **the SHA-256 above will not match a fresh clone.** Compare
+content, not digests, across that boundary.
 
 ### What was not vendored
 
