@@ -126,11 +126,19 @@ inform. Iterating with no stopping rule is how a search becomes a habit.
 ## Before you author a player prompt
 
 Invoke `prompt-engineering` **and** `hypershot-protocol` via the Skill tool, then
-author against them (Guardrail 15). Confirm each body actually arrived — a
-`Skill` call that returned has not yet delivered anything (`harness-traps`
-§ *A loaded skill is not an applied one*). **Both must be installed, not merely
-readable as text:** invoking opens the gate, reading a vendored copy does not,
-and a vendored copy is derived rather than an authority over its source.
+author against them (Guardrail 15).
+
+**A `Skill` call that returned has not delivered anything.** The tool reports
+that it launched and the body lands as a separate message, so a call can return,
+read as success, and deliver nothing — after which a session cites the skill from
+memory of what it usually says, which asserts a source it did not read. Before
+your first citation of either: name a section heading you can actually see in
+this session's context. If none is there, invoke it again; a re-invocation has
+recovered a body the first call dropped.
+
+**Both must be installed, not merely readable as text:** invoking opens the gate,
+reading a vendored copy does not, and a vendored copy is derived rather than an
+authority over its source.
 
 Pinned dependencies, install commands, and what breaks without each:
 <https://github.com/OpenCnid/self-play/blob/main/docs/DEPENDENCIES.md>.

@@ -16,7 +16,7 @@ sha256sum vendor/<name>/SKILL.md
 
 ## Installing them
 
-**The maintained way to install this skill and all six dependencies at once is
+**The maintained way to install this skill and all five dependencies at once is
 [OpenCnid/dovetail](https://github.com/OpenCnid/dovetail)** — a pack that holds
 each of them as a git submodule pinned to a commit, with no copies at all. Every
 dependency now has its own public repository, which the pack pins and this
@@ -37,7 +37,7 @@ cp -r vendor/prompt-engineering  ~/.claude/skills/
 cp -r vendor/hypershot-protocol  ~/.claude/skills/
 ```
 
-All six, if you want the skill's claims fully grounded:
+All five, if you want the skill's claims fully grounded:
 
 ```bash
 cp -r vendor/*/ ~/.claude/skills/
@@ -52,7 +52,7 @@ here as a fallback and a record of what this skill was built against.
 
 ## The dependency set
 
-Read off `SKILL.md` by grep, not inherited from a list. Six skills, and nothing
+Read off `SKILL.md` by grep, not inherited from a list. Five skills, and nothing
 else that a stranger would need to install.
 
 | Skill | Role in this skill | What breaks without it |
@@ -61,7 +61,6 @@ else that a stranger would need to install.
 | `hypershot-protocol` | **Guardrail 15, hard.** The player prompt frame *is* a hypershot. | The frame reads as a template with odd naming instead of a contamination-control device, and filled-in examples creep back into player prompts — the exact leak the method exists to close. |
 | `subagent-composition` | The **spawn gate** (§ *When to use*) and the **isolation ledger** (§ *The players*). | Two load-bearing claims lose their grounding: that a spawn is the expensive path, and that your reasoning does not cross into a player unless you put it there. Without the second, isolation is an assumption rather than a mechanism. |
 | `judge-composition` | The clean-context principle this skill generalizes, and the source of the judging seats that score utility. | § *What this is* loses its lineage, and "judges score utility" has no composition method behind it. |
-| `harness-traps` | § *A loaded skill is not an applied one*, cited in § *House note*. | The gate degrades into a checklist tick — a `Skill` call that returned gets read as guidance that arrived. |
 | `spark-steering` | § *Ask first — the un-tool*, behind the "a held expectation goes to the collaborator" rule. | The ground-block rule names a destination for a held expectation and cannot say what that move is or why it precedes installing configuration. |
 
 ## Pins
@@ -72,8 +71,7 @@ else that a stranger would need to install.
 | `hypershot-protocol` | `981BD9B0D92DAF8B` | 11,106 | [`vendor/hypershot-protocol/SKILL.md`](../vendor/hypershot-protocol/SKILL.md) | Same Lexideck lineage. |
 | `subagent-composition` | `D6CAFF44BA55791A` | 16,967 | [`vendor/subagent-composition/SKILL.md`](../vendor/subagent-composition/SKILL.md) | [OpenCnid/subagent-composition](https://github.com/OpenCnid/subagent-composition) at `1b9ffd5`. |
 | `judge-composition` | `3E563072EB5695AA` | 19,326 | [`vendor/judge-composition/SKILL.md`](../vendor/judge-composition/SKILL.md) | [OpenCnid/judge-composition](https://github.com/OpenCnid/judge-composition) at `de7446d`, which ships all thirteen records it cites in its own `references/` and is **canonical for its own skill and for those mirrored records**. Its design record originated in a now-deprecated repository; the mirrors **in `judge-composition` itself** are what remain of it. |
-| `harness-traps` | `5EEDC09973752A40` | 9,296 | [`vendor/harness-traps/SKILL.md`](../vendor/harness-traps/SKILL.md) | [OpenCnid/harness-traps](https://github.com/OpenCnid/harness-traps) at `fb0456e`. |
-| `spark-steering` | `D7260526991A98EB` | 5,537 | [`vendor/spark-steering/SKILL.md`](../vendor/spark-steering/SKILL.md) | [OpenCnid/spark-steering](https://github.com/OpenCnid/spark-steering) at `67cb3b6`, plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
+| `spark-steering` | `844DD833EF86DDED` | 5,633 | [`vendor/spark-steering/SKILL.md`](../vendor/spark-steering/SKILL.md) | [OpenCnid/spark-steering](https://github.com/OpenCnid/spark-steering) at `67cb3b6`, plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
 
 Full hashes are in [`vendor/HASHES.txt`](../vendor/HASHES.txt), verifiable with
 `sha256sum -c vendor/HASHES.txt`.
@@ -138,9 +136,8 @@ Regenerate with the source repositories checked out beside this one, then rerun
 ### What was not vendored
 
 Only `SKILL.md` is vendored for each dependency, because that is the file
-`SKILL.md` cites. Three dependencies carry more:
+`SKILL.md` cites. Two dependencies carry more:
 
-- `harness-traps/references/` — not vendored. The cited section is in the body.
 - `spark-steering/references/` — not vendored, including
   `steer-1-levers.md` § *The un-tool*, which the body cites for the
   construction and its provenance. The body carries enough to act on; a reader

@@ -78,7 +78,7 @@ the clean room is worth building at all** — which it answers "no" whenever a
 deterministic check would settle the matter.
 
 > [!NOTE]
-> The skill names six sibling skills. Pinned copies of all of them are vendored
+> The skill names five sibling skills. Pinned copies of all of them are vendored
 > under [`vendor/`](vendor/) with provenance and hashes in
 > [`docs/DEPENDENCIES.md`](docs/DEPENDENCIES.md). Two of them —
 > `prompt-engineering` and `hypershot-protocol` — are a **hard** requirement for

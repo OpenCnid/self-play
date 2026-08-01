@@ -43,9 +43,6 @@ came from. Each carries its own authorship:
       public; the vendored SKILL.md is the most authoritative copy a reader
       outside that repository can obtain.
 
-  vendor/harness-traps/SKILL.md
-      OpenCnid Labs. This SKILL.md is its own canonical form.
-
   vendor/spark-steering/SKILL.md
       OpenCnid Labs. Canonical form is this SKILL.md plus a references/
       directory that is NOT vendored here.

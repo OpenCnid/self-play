@@ -73,4 +73,4 @@ The last two lines are not optional. An axis named and deliberately left alone, 
 
 ---
 
-What a flag or setting actually does once flipped — as opposed to what its name implies — is the `harness-traps` skill's concern, not this one.
+What a flag or setting actually does once flipped — as opposed to what its name implies — is outside this skill's scope. This one locates which axis is short; verify the mechanism of any fix against the harness itself before installing it.
