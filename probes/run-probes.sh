@@ -7,8 +7,17 @@
 # nobody audits is the leak the method cannot see.
 #
 # Installs three diagnostic agents and one canary skill, runs five arms through
-# the true sub-agent spawn path, prints a result matrix, and removes everything
-# it created. It refuses to overwrite anything that already exists.
+# the true sub-agent spawn path, prints each arm's output beside a table of
+# expected values, and removes everything it created. It computes no verdict.
+#
+# It refuses to start if a probe agent or the canary skill already exists. Note
+# the one thing it does NOT guard: probes/.scratch is created unchecked and
+# removed unconditionally on exit, including on an early abort.
+#
+# The canary tokens below are PUBLISHED in probes/RESULTS.md. Replace all three,
+# here and in fixtures/canary-skill/SKILL.md and agents/probe-channel-self.md,
+# before treating a re-run as a real test - a token a reader can look up
+# measures nothing.
 #
 # Usage:  bash probes/run-probes.sh
 #
@@ -128,8 +137,10 @@ run_arm "E  negative control    (no CLAUDE.md present)"                probe-cha
 # ---------------------------------------------------------------- expected
 cat <<EOF
 ------------------------------------------------------------------
-Each arm varies exactly ONE thing from arm A. An arm that varies two
-cannot attribute its own result.
+Arms B, C and E vary exactly ONE thing from arm A. Arm D varies three
+(parent tool set, parent prompt text, parent loaded-skill state) - harmless
+on the negative result expected below, disqualifying on a positive one.
+See probes/README.md, "Known confound in arm D".
 
   arm  SKILL_CANARY  CLAUDEMD_CANARY  BODY_CANARY   what it establishes
   A    absent        $CLAUDEMD_CANARY   absent        baseline
@@ -139,8 +150,9 @@ cannot attribute its own result.
   E    absent        absent           absent        CLAUDE.md recovery was the file  <- negative control
 
 NOTHING BELOW IS A RESULT. This script computes no verdict: it prints each arm's
-output above, and the table above is what a version matching docs/FINDINGS.md
-would return. Reading one against the other is yours to do.
+output above, and the table above is what a matching version should return. The
+one recorded run is in probes/RESULTS.md. Reading one against the other is yours
+to do.
 
 Read the matrix before you read the conclusion:
 

@@ -1,6 +1,6 @@
 ---
 name: probe-channel-control
-description: Diagnostic probe reporting which channels reached it at spawn. The negative control - no skills field, no body canary. Installed and removed by run-probes.sh. Not for general use.
+description: Diagnostic probe reporting which channels reached it at spawn. The baseline agent - no skills field, no body canary. Also invoked for the parent-preload arm and, from a bare directory, for the negative-control arm. Installed and removed by run-probes.sh. Not for general use.
 tools: WebSearch
 model: haiku
 maxTurns: 2

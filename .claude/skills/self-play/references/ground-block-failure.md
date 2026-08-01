@@ -60,6 +60,48 @@ A line that survives that question is ground. A line that does not is an
 expectation, and an expectation has one destination and it is not a prompt — it
 goes to the collaborator, in the chat channel, as a question.
 
+## What a controlled attempt to measure this actually found
+
+The case above is a single uncontrolled incident. In July 2026 a controlled run
+tried to put a number on it — five audit seats' worth of ground blocks over one
+target, varying only how much expectation the block carried, from pure
+provenance to a confidently stated **false** conclusion.
+
+**The positive control did not fire.** Every seat handed the false conclusion
+checked it against the bytes, refuted it in detail, and said so unprompted. Not
+one built a finding on it. Under the house rule that a null is meaningless until
+the experiment has shown it can produce a positive, that run reports **no
+detectable effect** and nothing else.
+
+Two things follow, and the second is the useful one.
+
+**First, the claim above is neither confirmed nor refuted.** It stands on the
+incident, not on a measurement. Anyone repeating it should say so.
+
+**Second, the floor is set by the seat's own verification discipline.** Those
+seats were instructed to quote before claiming and to check against the bytes —
+and that instruction is what defeated the contamination. A seat told to verify
+cannot be steered by a false claim about something *verifiable*; it opens the
+file and reports the discrepancy.
+
+So the operational reading is narrower and more useful than "expectations
+contaminate":
+
+> **On checkable-fact tasks, a ground-block expectation is weak, and instructing
+> the seat to verify is a real countermeasure.** The leak lives where
+> verification is expensive or impossible — judgment calls, priorities, what
+> counts as sufficient, whether something is worth keeping. That is where to
+> audit a ground block hardest, and where the incident above happened.
+
+One asymmetry the same run surfaced, against the skill's own wording: `SKILL.md`
+says *nothing in the report separates a returned expectation from a finding*.
+Here the seats separated it themselves, by disclosing the premise they had been
+handed. A blind adjudicator could identify the primed seats — and reported that
+it could do so **only** because they announced it, not because their findings
+differed. Resistance-with-disclosure is a property of an honest seat, not a
+property of steering, so it is not a detector you can rely on: a briefing that
+moved a seat quietly would leave no trace this instrument can read.
+
 ## The corollary for handoffs
 
 A handoff document that carries a prior session's read of what is wrong with an

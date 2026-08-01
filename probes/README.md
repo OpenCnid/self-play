@@ -29,7 +29,7 @@ about whether the skill helps.
 | `agents/probe-channel-self.md` | **format control** — carries a canary in its own body |
 | `agents/probe-channel-skill.md` | **positive control** — the nearest *foreign* channel, declared in `skills:` |
 | `fixtures/canary-skill/SKILL.md` | the content being smuggled across the boundary |
-| `run-probes.sh` | install, run five arms, print the matrix, clean up |
+| `run-probes.sh` | install, run five arms, print output beside expectations, clean up |
 
 Three agent files, five arms. Two arms reuse the control agent and vary the
 **invocation** instead of the file — one has the parent preload the canary
@@ -105,20 +105,28 @@ expected result is negative, where the confound is harmless. Recorded rather tha
 quietly tolerated, because the rule printed by the script forbids varying two
 things at once and this arm does.
 
+## What has been run
+
+**One run is recorded**, in [RESULTS.md](RESULTS.md) — Claude Code 2.1.214,
+Windows, 2026-07-31, every arm matching and all three controls behaving. That is
+one run on one platform with one model, not a compatibility promise. The script
+still computes no verdict; the matrix in that file was read off the arms by a
+person.
+
+**The expected values are inherited from the audited source.** Arm D's expected
+"does not cross" comes from `subagent-composition`'s own ledger, and a
+substantially similar probe was run upstream. An audit whose design and expected
+answers both come from the thing it audits is weaker than an independent one, and
+this one is disclosed as such.
+
+**The shipped canary tokens are burnt.** They are published in `RESULTS.md`, so a
+verbatim re-run tests tokens a reader can look up. Replace all three — in
+`run-probes.sh`, `fixtures/canary-skill/SKILL.md`, and
+`agents/probe-channel-self.md` — before treating a re-run as a real test.
+
 ## Not probed
 
 Stated for honesty; do not treat these as established.
-
-- **One run is recorded**, in [RESULTS.md](RESULTS.md) — Claude Code 2.1.214,
-  Windows, 2026-07-31, every arm matching and both controls behaving. That is one
-  run on one platform with one model, not a compatibility promise. The script
-  still computes no verdict; the matrix in that file was read off the arms by a
-  person.
-- **The expected values are inherited from the audited source.** Arm D's expected
-  "does not cross" comes from `subagent-composition`'s own ledger, and a
-  substantially similar probe was run upstream. An audit whose design and
-  expected answers both come from the thing it audits is weaker than an
-  independent one, and this one is disclosed as such.
 
 - Whether the composer's **conversation history** crosses. The harness cannot
   cleanly separate "the boundary leaked it" from "the spawning turn passed it

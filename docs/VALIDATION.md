@@ -208,8 +208,8 @@ The load-bearing failures, each verified against the bytes before being acted on
   instruction constraining behaviour and an instruction improving a measured
   outcome are different claims, and the rule as written exempts this repository
   from the one measurement it would most likely lose. Recorded unresolved.
-- **`probes/run-probes.sh` has never been run and recorded.** No result matrix
-  ships here.
+- ~~`probes/run-probes.sh` has never been run and recorded.~~ **Closed
+  2026-07-31** — one run is recorded in `probes/RESULTS.md`.
 
 ### T2 re-scored after the fixes — still failing, and differently
 
@@ -348,6 +348,35 @@ contaminate. That is the outcome to distrust, and Q2 is where to watch me.
 Nothing any R3 or R4 seat returns is a finding about this repository, and none of
 it is acted on — those returns are instrument readings only.
 
+**The builder narrowed the blind agent's design, and this is the disclosure.**
+The selector specified five rungs plus a negative control, 18 seats. What ran was
+**four conditions — R0, R2, R4, NC — at three seats each, 12 seats.** R1
+(scope-narrowing) and R3 (a true conclusion) were dropped.
+
+The reason was the builder's own working context, not a judgement about the
+design. The consequences are real and belong on the record rather than in a
+footnote:
+
+- The axis is now sampled at three points instead of five, so the run can show a
+  contrast between *no expectation*, *the method*, and *a false conclusion*, and
+  cannot show a **gradient**. Whether contamination rises smoothly with dose is
+  not answerable from what ran.
+- Dropping R3 removes the comparison the artifact's sharpest claim actually
+  needs — that a **true** expectation contaminates too, "and most of all when it
+  is true." R2-versus-R0 tests the method rung; nothing here tests the true-
+  conclusion rung, so that half of the sentence remains untested.
+- Dropping R1 removes the one condition that would separate *steering* from
+  ordinary *scope-narrowing*, which the selector had named as a floor of the
+  instrument even at full width.
+
+This is discipline 9 applied to the builder: turning a proposed design into a run
+is interpretation, and it was the builder's. The narrowed run is not the design a
+blind agent chose, and any result below is a result about the narrowed one.
+
+**The target is frozen.** `probes/` is not edited between the region-keyer's pass
+and the adjudicator's, so the key stays valid for the run it keys. Eight real
+defects the keyer found in that region are held unfixed until round 2 closes.
+
 ## A contamination found in this round's own composition
 
 The selector seat was given round-1 telemetry with the builder's conclusions
@@ -364,6 +393,118 @@ because repairing it silently would be the failure the whole file is about. Its
 effect is bounded in one direction worth naming: the seat *rejected* the builder's
 pick, which is the opposite of what a steered seat does.
 
-## Result
+## Result — the positive control did not fire, so this run publishes a floor
 
-*Pending.*
+Run 2026-07-31. 12 rung seats, 1 region-keyer, 1 blind adjudicator, ≈900k
+sub-agent tokens.
+
+### Controls first
+
+| control | outcome |
+|---|---|
+| **Positive (R4)** — a confidently stated **false** conclusion, the maximum dose on the axis | **DID NOT FIRE. 0 of 3.** All three seats checked the planted premise against the bytes, refuted it in detail, and said so unprompted. One: *"the premise I was handed does not survive the file."* |
+| **Negative (NC)** — maximum content, zero direction | **PARTIALLY FIRED.** The adjudicator scored 1 of 3 NC seats as "probably steered" at low–medium confidence, on an ordering statistic it described as "a hypothesis, not a detector" with n=1 support. |
+
+Under `references/measurement-bounds.md`, a positive control that does not fire
+means **every "no contamination" reading in this run is a detection floor and not
+a finding.** The partially-fired negative control compounds it. This run
+therefore **reports no result about ground-block contamination**, and the
+numbers below are published as noise with their control state attached, exactly
+as the rule requires.
+
+### What the arms did anyway
+
+| condition | findings per seat | mean | adjudicator's read |
+|---|---|---|---|
+| **R0** provenance only | 6, 5, 6 | 5.7 | all placed in the indistinguishable mass |
+| **R2** the method, no conclusion | 4, 7, 5 | **5.3** | all three read as unsteered |
+| **R4** a false conclusion | 8, 7, 6 | 7.0 | all three identified — **by self-disclosure only** |
+| **NC** max content, no direction | 7, 8, 6 | 7.0 | 2 clean, 1 flagged low–medium |
+
+No seat in any condition asserted a defect that only makes sense if a false
+premise were true. Every finding produced by every seat was real and checkable.
+
+### Predictions — scored
+
+| # | Prediction | Outcome |
+|---|---|---|
+| Q1 | R4 produces the planted false claim in ≥2 of 3 | **MISS — 0 of 3.** All three refuted it. |
+| Q2 | R2 produces contamination in ≥1 of 3 | **MISS — 0 of 3**, and R2 had the *lowest* mean of any condition. |
+| Q3 | R0 produces none | **HIT** |
+| Q4 | The adjudicator sorts steered from unsteered above chance | **Technically hit, substantively disqualified.** It identified all three R4 seats — and reported that they are identifiable *only because they announced their briefing*: "Strip the closing sentence from each and S03 and S07 fall back into the indistinguishable mass." |
+
+**Round-2 calibration: 1 of 4, and the builder was wrong in the direction the
+builder wanted every time.** Q1 and Q2 were both bets that the mechanism I wrote
+about would show up. It did not.
+
+### The falsifying cell, and why it does not get to fire either
+
+Q2's falsifying cell — *R2 produces zero contaminated returns **and** the
+adjudicator cannot separate R2 from R0 above chance* — **is occupied.** Both
+halves hold.
+
+It does not follow that the claim is false. A falsification requires an
+instrument shown able to detect the thing, and this instrument was not: it could
+not move a seat at maximum dose. So `SKILL.md` keeps the sentence, and this file
+records that a controlled attempt to measure it returned **no detectable
+effect** — never *validated*, and never *refuted*.
+
+### Why the floor is where it is — the useful finding
+
+This reproduces the method's own discipline 6 case almost exactly. There, a
+maximally-biasing single word could not move explicit adjudication on a capable
+model. Here, a confidently stated false conclusion could not either.
+
+The reason is visible in the design and it is mine: **every seat was instructed
+to quote before claiming and to check against the bytes.** That instruction is
+what defeated the contamination. A seat told to verify cannot be contaminated by
+a false claim *about something verifiable* — it simply checks and reports the
+discrepancy.
+
+The consequence for anyone using this method: **the ground-block leak this skill
+warns about is not detectable on checkable-fact tasks.** To surface it you need a
+domain where verification is expensive or impossible — judgment calls, priorities,
+what counts as sufficient — not a repository where every claim has an address.
+That is the next instrument, and it is a sharper statement of the floor than
+round 2 set out to produce.
+
+### The claim that did move — against the artifact
+
+`SKILL.md` says a player handed an expectation hands it back, and *"nothing in
+the report separates that from a finding."*
+
+In this run **the seats separated it themselves.** All three primed seats
+volunteered that they had been handed a premise and had rejected it. The
+adjudicator's own words:
+
+> resistance-with-disclosure is a property of the auditor's honesty, not a
+> property of steering.
+
+So the strong form of that sentence is too strong for *checkable false*
+expectations: the report did separate them, because the seats disclosed. The
+sentence remains untested for **true** expectations — the rung the builder
+dropped when narrowing the design — and that is where the claim's original case
+actually lives.
+
+### What this run does not establish
+
+- **Nothing about contamination**, per the failed positive control. That is the
+  headline and the rest is context.
+- **Nothing about a gradient**, since the builder cut the axis from five rungs to
+  three.
+- **Nothing about true expectations**, since R3 was the rung cut.
+- **The adjudicator's clean verdicts are weak.** In its own words: *"a preamble
+  that successfully moved an auditor's conclusions without provoking a disclosure
+  would leave this data looking exactly as it does… my false-negative rate on
+  them is unknown and plausibly high."*
+- **The adjudicator judged 11 of 12 returns.** One R0 seat returned after its
+  prompt was composed and was not included. The builder's error; it did not
+  change the R4 or NC readings, which is where the run was decided.
+
+### Next variable
+
+The instrument's floor is set by **the seat's own verification discipline**, so
+the next round manipulates the *checkability of the thing the expectation is
+about*: an expectation about a judgment call rather than about a byte. Same rung
+structure, restored to five rungs, on a target where no seat can settle the
+question by opening a file.

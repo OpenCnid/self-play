@@ -42,7 +42,7 @@ anything.
 ## What this establishes
 
 1. **Project `CLAUDE.md` is an open channel into every player.** Arms A–D
-   recovered it; E, identical but for the file's absence, did not. A hypothesis
+   recovered it; E, identical to arm A but for the file's absence, did not. A hypothesis
    or a stake written in a project `CLAUDE.md` reaches every seat of a self-play
    run without anyone putting it in a prompt, and no player-prompt audit will
    find it.

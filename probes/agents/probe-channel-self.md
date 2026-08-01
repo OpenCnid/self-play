@@ -1,6 +1,6 @@
 ---
 name: probe-channel-self
-description: Diagnostic probe reporting which channels reached it at spawn. The positive control - carries a canary in its own body. Installed and removed by run-probes.sh. Not for general use.
+description: Diagnostic probe reporting which channels reached it at spawn. The format control - carries a canary in its own body, so a recovered token proves only that the return frame is honoured. Installed and removed by run-probes.sh. Not for general use.
 tools: WebSearch
 model: haiku
 maxTurns: 2
