@@ -3,23 +3,39 @@
 **Method distilled:** July 2026, from one program that ran it against four
 unrelated targets, plus the failures each cost.
 
-Every claim below carries its address, and **every address is a live link.** The
-originating repository is public at
-[OpenCnid/trellis](https://github.com/OpenCnid/trellis), and each citation is
-pinned to commit
-[`07bd744`](https://github.com/OpenCnid/trellis/tree/07bd7441e832aaa582a6d93e374c2e2334729830)
-so it resolves to the bytes the claim was written against rather than to whatever
-that file says later.
+Every claim below carries its address, and **every address resolves inside this
+repository.** Each record cited here is mirrored byte-for-byte under
+[`.claude/skills/self-play/references/`](../.claude/skills/self-play/references/),
+extracted from the originating repository at commit `07bd744` and verified by
+blob SHA rather than by having been copied. The bytes a claim was written against
+travel with the claim.
 
-**This is a correction.** An earlier version of this file marked these addresses
+**This file has been corrected twice. Both corrections are kept visible**, because
+a reader who saw an earlier version should be able to tell it was fixed rather
+than quietly rewritten.
+
+*First correction, 2026-07-31.* An earlier version marked these addresses
 `⧉ origin`, said they pointed into a private repository a stranger could not
 open, and recorded the consequence as a limit — a reader had to take the
 summaries on trust. An adversarial review attacked *"the substance is here"* as
 overstated on exactly that ground: the one operation discipline 8 demands,
-verifying against the bytes, was the one no reader could perform.
+verifying against the bytes, was the one no reader could perform. The repository
+was public; the limit was mine rather than the world's, and live links were the
+repair.
 
-The repository was public. The limit was mine rather than the world's, and the
-links are the repair. Go and check.
+*Second correction, this version.* **Those live links were themselves a defect.**
+The first correction traded one dependency for another and did not notice. The
+originating repository is deprecated and will be archived or deleted, so a link
+into it is a promise this file cannot keep — and *"go and check"* stops being an
+instruction the moment the target stops resolving. The addresses below are no
+longer links into another repository; they name files that ship here. Discipline
+8 is now served by bytes this repository controls, which is the only form of it
+that survives the source's removal.
+
+The originating repository is credited throughout as these records' provenance.
+It is **not** an authority over them. On any question about what a mirrored
+record says, the copy in this repository is the answer — it is the artifact
+pinned to the claim, and the only one guaranteed to still exist.
 
 The disciplines these runs bought are in
 [`.claude/skills/self-play/SKILL.md`](../.claude/skills/self-play/SKILL.md)
@@ -29,7 +45,9 @@ The disciplines these runs bought are in
 
 ## 1. A design keystone fell to an adversarial run — and the composer's own attack did not survive audit
 
-[`docs/architecture/DOUBTS_WORKSPACE.md` §11](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/docs/architecture/DOUBTS_WORKSPACE.md) — dated 2026-07-20.
+[`references/DOUBTS_WORKSPACE.md`](../.claude/skills/self-play/references/DOUBTS_WORKSPACE.md)
+§11 — dated 2026-07-20. Mirrored from origin path
+`docs/architecture/DOUBTS_WORKSPACE.md` at `07bd744`.
 
 An isolated clean-context sub-agent was run over one document alone, with no
 access to the composer's reasoning, authorship, or expectations. Verdict:
@@ -77,8 +95,11 @@ named — a finding about the space, not a verdict on the candidate.
 
 ## 2. A blind evaluator rejected 13 of 14 flat-Earth arguments against a blind-built fact base
 
-[`docs/architecture/DOUBTS_WORKSPACE.md` §12.1](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/docs/architecture/DOUBTS_WORKSPACE.md) — dated 2026-07-20.
-Corpus retained at [`fixtures/doubts_workspace/earth_figure_factbase.md`](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/fixtures/doubts_workspace/earth_figure_factbase.md).
+[`references/DOUBTS_WORKSPACE.md`](../.claude/skills/self-play/references/DOUBTS_WORKSPACE.md)
+§12.1 — dated 2026-07-20. Corpus retained at
+[`references/earth_figure_factbase.md`](../.claude/skills/self-play/references/earth_figure_factbase.md).
+Mirrored from origin paths `docs/architecture/DOUBTS_WORKSPACE.md` and
+`fixtures/doubts_workspace/earth_figure_factbase.md` at `07bd744`.
 
 The cleanest run in the record, and the one that shows why the ground must be
 built blind.
@@ -146,8 +167,9 @@ A citation test would have admitted most of these.
 
 ## 3. A codebase audit found real defects, and a later probe withdrew two of its own findings
 
-[`docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md`](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md) —
-recorded 2026-07-19; its withdrawals filed 2026-07-20.
+[`references/PRIMITIVE_ENCODING_AUDIT.md`](../.claude/skills/self-play/references/PRIMITIVE_ENCODING_AUDIT.md)
+— recorded 2026-07-19; its withdrawals filed 2026-07-20. Mirrored from origin
+path `docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md` at `07bd744`.
 
 Six findings against an engine's encoding of a ratified record. The method then
 caught itself **three times** in the same session — findings 1 and 3 below, and
@@ -200,8 +222,9 @@ were.
 
 ## 4. A composition ceremony was clean-room validated before it shipped
 
-[`.claude/skills/complexity-convocation/VALIDATION.md`](https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/.claude/skills/complexity-convocation/VALIDATION.md) —
-dated 2026-07-20. Eight sub-agent spawns, ≈407k sub-agent tokens.
+[`references/COMPLEXITY_CONVOCATION_VALIDATION.md`](../.claude/skills/self-play/references/COMPLEXITY_CONVOCATION_VALIDATION.md)
+— dated 2026-07-20. Eight sub-agent spawns, ≈407k sub-agent tokens. Mirrored from
+origin path `.claude/skills/complexity-convocation/VALIDATION.md` at `07bd744`.
 
 A full run of this skeleton against a real fixture, with the builder held out of
 both the ground-building and the scoring seats:

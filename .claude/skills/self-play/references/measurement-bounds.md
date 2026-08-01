@@ -118,8 +118,18 @@ carries as `.claude/rules/measurement-and-reporting.md` (rules 8, 11, 19(c) and
 20). The substance a self-play run depends on is restated here in full, and this
 file is what the skill cites — so nothing here requires opening anything else.
 
-The source is public and pinned, if you want to check the restatement against it:
-<https://github.com/OpenCnid/trellis/blob/07bd7441e832aaa582a6d93e374c2e2334729830/.claude/rules/measurement-and-reporting.md>
+**Because those rules are cited by number, the rule text ships here too.** A
+restatement alone cannot settle what "rule 19(c)" says; only the bytes it was
+written against can. The source is mirrored byte-for-byte at
+[`measurement-and-reporting.md`](measurement-and-reporting.md) — extracted at
+commit `07bd744` and verified by blob SHA — so the restatement above is checkable
+against its source from inside this repository.
 
-An earlier version of this file said that source could not be opened by anyone
-outside the originating repository. That was wrong.
+**This provenance note has been corrected twice.** An early version said the
+source could not be opened by anyone outside the originating repository; that was
+wrong, and it was replaced with a live link. **The live link was also wrong** —
+the origin repository is deprecated and will be archived or deleted, so a URL
+into it would have rotted and taken the only check with it. The mirror replaces
+the link. Where the mirror and any surviving copy of the origin ever disagree,
+**the mirror in this repository is what this skill's claims were written
+against**, and it is the one that settles the reading here.

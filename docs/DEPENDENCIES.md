@@ -71,7 +71,7 @@ else that a stranger would need to install.
 | `prompt-engineering` | `87AD6993F587F094` | 5,907 | `~/.claude/skills/prompt-engineering/SKILL.md` | The Lexideck Prompt Engineering Curriculum (Matthew Murphy). The `SKILL.md` is the deployed artifact, not the curriculum. |
 | `hypershot-protocol` | `A97D26B654D3CE2B` | 11,265 | `~/.claude/skills/hypershot-protocol/SKILL.md` | Same Lexideck lineage. |
 | `subagent-composition` | `2F1BB2FAB87C08E8` | 17,538 | `~/.claude/skills/subagent-composition/SKILL.md` | `github.com/OpenCnid/subagent-composition` — **see the drift note below.** |
-| `judge-composition` | `6271CED312BE7276` | 24,334 | `~/.claude/skills/judge-composition/SKILL.md` | [OpenCnid/judge-composition](https://github.com/OpenCnid/judge-composition), which since 2026-07-31 ships all thirteen records it cites in its own `references/`. Its design record is public in [OpenCnid/trellis](https://github.com/OpenCnid/trellis). **The pin above is behind that**; see the note below. |
+| `judge-composition` | `6271CED312BE7276` | 24,334 | `~/.claude/skills/judge-composition/SKILL.md` | [OpenCnid/judge-composition](https://github.com/OpenCnid/judge-composition), which since 2026-07-31 ships all thirteen records it cites in its own `references/` and is **canonical for its own skill and for those mirrored records**. Its design record originated in a now-deprecated repository; the mirrors **in `judge-composition` itself** are what remain of it. **The pin above is behind that**; see the note below. |
 | `harness-traps` | `5EEDC09973752A40` | 9,296 | `~/.claude/skills/harness-traps/SKILL.md` | This `SKILL.md`. |
 | `spark-steering` | `760C7DA9282AD2B3` | 5,613 | `~/.claude/skills/spark-steering/SKILL.md` | This `SKILL.md` plus its `references/`, backed by a 373-primitive map of Claude Code surfaces kept with its research paper. |
 
@@ -120,14 +120,22 @@ Only `SKILL.md` is vendored for each dependency, because that is the file
 
 ## Rules this skill depends on
 
-`SKILL.md` cites house rules that live in the origin repository. Each is restated
-portably here so the skill stands alone — and **the origin repository is public**,
-at [OpenCnid/trellis](https://github.com/OpenCnid/trellis), pinned for these
-citations at
-[`07bd744`](https://github.com/OpenCnid/trellis/tree/07bd7441e832aaa582a6d93e374c2e2334729830).
-So each restatement below is checkable against its source rather than taken on
-trust. An earlier version of this table described that repository as private; it
-is not.
+`SKILL.md` cites house rules that originated in another repository. Each is
+restated portably here so the skill stands alone, and **every rule this skill
+cites by number also ships here byte-for-byte**, extracted at commit `07bd744`
+and verified by blob SHA. So each restatement below is checkable against its
+source from inside this repository rather than taken on trust.
+
+**This paragraph has been corrected twice, and both corrections are kept.** An
+early version described the origin repository as private, so the restatements
+were uncheckable. That was wrong and was replaced with live links to it. **The
+links were wrong too**: that repository is deprecated and will be archived or
+deleted, and a citation that depends on it resolving is a citation with an expiry
+date. Mirrors replace the links.
+
+**This repository is now canonical for this skill**, including for its copies of
+the rules below. Nothing outside it wins on drift, because nothing outside it is
+guaranteed to be there.
 
 | Rule | Where it was cited | Disposition here |
 |---|---|---|

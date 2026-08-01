@@ -19,8 +19,14 @@ diagnostics that exist to be run and deleted; they are deliberately *not* in
 ## Guardrail 15 — the protocols run before the bytes
 
 This is house-wide across OpenCnid, and it binds work in this repository
-directly. It is restated here in full because the rule file it comes from is not
-public.
+directly. It is restated here in full because the rule file it comes from lives
+in a repository that is deprecated and will be archived or deleted — so the
+restatement below, not that file, is what binds work here.
+
+*Corrected 2026-08-01.* This paragraph previously said that rule file was **not
+public**. That was wrong; it was public. The reason the restatement is
+load-bearing has changed rather than gone away: reachability was never the
+problem, permanence is.
 
 **The trigger is an act, not an intent.** A session is prompt authoring when the
 bytes it writes will enter some model's context as instruction — whatever the
