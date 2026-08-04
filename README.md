@@ -68,8 +68,27 @@ flat-Earth argument.
 
 ```bash
 git clone https://github.com/OpenCnid/self-play.git
+mkdir -p ~/.claude/skills
 cp -r self-play/.claude/skills/self-play ~/.claude/skills/
 ```
+
+**Do not skip the `mkdir`.** If `~/.claude/skills/` does not already exist, `cp`
+reads the trailing path as a *rename target*: you get `~/.claude/skills/SKILL.md`
+with no skill directory, exit code 0, and no error. The skill never loads and
+nothing tells you why.
+
+PowerShell:
+
+```powershell
+git clone https://github.com/OpenCnid/self-play.git
+New-Item -ItemType Directory -Force ~/.claude/skills
+Copy-Item -Recurse -Force self-play/.claude/skills/self-play ~/.claude/skills/
+```
+
+`-Force` matters on the second run — without it, an upgrade fails with *an item
+with the specified name already exists*.
+
+If you have set `CLAUDE_CONFIG_DIR`, that is your skills root, not `~/.claude`.
 
 Then say *"is this rubric actually doing anything"*, *"red-team this design"*,
 *"explore this design space"*, or *"validate this without fooling myself"* and it
