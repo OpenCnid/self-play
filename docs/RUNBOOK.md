@@ -20,7 +20,7 @@ a legitimate reason and it is the one that applies here; task size, task
 multiplicity, and "be thorough" are not. If a deterministic check answers the
 question, run the check and skip this document.
 
-**Guardrail 15.** A session that will author player prompts invokes
+**.** A session that will author player prompts invokes
 `prompt-engineering` and `hypershot-protocol` first, in the session doing the
 writing, and confirms each body arrived. A returned `Skill` call has not yet
 delivered anything.
