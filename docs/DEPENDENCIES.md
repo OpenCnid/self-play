@@ -25,7 +25,7 @@ document records.
 The commands below remain the fallback for installing from this repository
 alone.
 
-**Reading a vendored copy does not open; installing it does.** The
+**Reading a vendored copy does not open the gate; installing it does.** The
 gate is opened by *invoking* a skill, and a skill can only be invoked once it is
 in a skills directory. The vendored bytes are the same bytes — what changes is
 whether the harness can load them.
@@ -57,8 +57,8 @@ else that a stranger would need to install.
 
 | Skill | Role in this skill | What breaks without it |
 |---|---|---|
-| `prompt-engineering` | **, hard.** Opens the gate for authoring player prompt bytes. | Player prompts get authored ungated. The skill's own § *House note* becomes a sentence the repository does not honour. |
-| `hypershot-protocol` | **, hard.** The player prompt frame *is* a hypershot. | The frame reads as a template with odd naming instead of a contamination-control device, and filled-in examples creep back into player prompts — the exact leak the method exists to close. |
+| `prompt-engineering` | **Gate skill, hard.** Opens the gate for authoring player prompt bytes. | Player prompts get authored ungated. The skill's own § *House note* becomes a sentence the repository does not honour. |
+| `hypershot-protocol` | **Gate skill, hard.** The player prompt frame *is* a hypershot. | The frame reads as a template with odd naming instead of a contamination-control device, and filled-in examples creep back into player prompts — the exact leak the method exists to close. |
 | `subagent-composition` | The **spawn gate** (§ *When to use*) and the **isolation ledger** (§ *The players*). | Two load-bearing claims lose their grounding: that a spawn is the expensive path, and that your reasoning does not cross into a player unless you put it there. Without the second, isolation is an assumption rather than a mechanism. |
 | `judge-composition` | The clean-context principle this skill generalizes, and the source of the judging seats that score utility. | § *What this is* loses its lineage, and "judges score utility" has no composition method behind it. |
 | `spark-steering` | § *Ask first — the un-tool*, behind the "a held expectation goes to the collaborator" rule. | The ground-block rule names a destination for a held expectation and cannot say what that move is or why it precedes installing configuration. |
@@ -166,7 +166,7 @@ guaranteed to be there.
 | Rule | Where it was cited | Disposition here |
 |---|---|---|
 | Measurement doctrine — instructions are specifications; a null needs a discriminating control; correctness is the whole score | § *When to use*, discipline 6, § *The cell that matters* | **Restated in full** at [`.claude/skills/self-play/references/measurement-bounds.md`](../.claude/skills/self-play/references/measurement-bounds.md). That file is what the skill cites. |
-| — the two protocols run before the bytes | § *House note* | **Restated in full** in [`AGENTS.md`](../AGENTS.md) § **. It is house-wide, so it binds work in this repository directly. |
+| The authoring gate — the two protocols run before the bytes | § *House note* | **Restated in full** in [`AGENTS.md`](../AGENTS.md) § *The authoring gate*. It is house-wide, so it binds work in this repository directly. |
 | The positive-control duty — *a null result is meaningless until the experiment has demonstrated it can produce a positive one* | discipline 6 | **Restated verbatim in the discipline itself.** The origin citation is dropped; the sentence is load-bearing and now travels with the rule that uses it. |
 | Ask-the-collaborator — put an underdetermined call to the collaborator rather than settling it with standing configuration | § *The `## Ground` block* | **Restated in full** in the section, with the reason attached. Also carried in [`AGENTS.md`](../AGENTS.md). |
 

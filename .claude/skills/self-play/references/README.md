@@ -90,7 +90,7 @@ and nothing travels because it is nearby or interesting.
   rest on the rule text, not on the document the rule text points at. **Do not
   repair that pointer** — editing a mirror to fix an internal link is exactly the
   edit that would end its byte-identity.
-- **`.claude/rules/prompt-authoring.md`** — Guardrail 15, restated in full in
+- **`.claude/rules/prompt-authoring.md`** — the authoring gate, restated in full in
   [`AGENTS.md`](../../../../AGENTS.md). No claim here cites it by rule number, so
   the restatement is sufficient and the bytes are not needed.
 

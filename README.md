@@ -101,7 +101,8 @@ deterministic check would settle the matter.
 > under [`vendor/`](vendor/) with provenance and hashes in
 > [`docs/DEPENDENCIES.md`](docs/DEPENDENCIES.md). Two of them —
 > `prompt-engineering` and `hypershot-protocol` — are a **hard** requirement for
-> authoring player prompts, under an OpenCnid convention called.
+> authoring player prompts, under an OpenCnid convention called the
+> authoring gate.
 > The rest degrade gracefully; [`docs/INTERFACE.md`](docs/INTERFACE.md) says
 > exactly how.
 
