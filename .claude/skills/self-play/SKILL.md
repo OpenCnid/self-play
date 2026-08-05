@@ -137,7 +137,7 @@ inform. Iterating with no stopping rule is how a search becomes a habit.
 ## Before you author a player prompt
 
 Invoke `prompt-engineering` **and** `hypershot-protocol` via the Skill tool, then
-author against them (Guardrail 15). **Both must be installed, not merely readable
+author against them. **Both must be installed, not merely readable
 as text:** invoking opens the gate, reading a vendored copy does not, and a
 vendored copy is derived, not an authority over its source.
 
