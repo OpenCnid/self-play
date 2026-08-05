@@ -104,7 +104,7 @@ Named by what actually stops working, so a caller can decide whether to proceed.
 | `spark-steering` | The un-tool has a destination but no construction. Put the held expectation to the collaborator anyway; that is the whole move. | Yes. |
 | A sub-agent spawn facility | Nothing. See the host-requirements table. | No. |
 
-The pattern: the two Guardrail 15 skills are load-bearing for the *act of
+The pattern: the two skills are load-bearing for the *act of
 authoring*, and the rest are load-bearing for *grounding claims the skill makes
 about itself*. Missing grounding is disclosed and survivable; a missing gate is
 not.
