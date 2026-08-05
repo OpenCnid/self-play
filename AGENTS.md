@@ -16,7 +16,7 @@ There are **no installable agents here**. `probes/agents/` holds three
 diagnostics that exist to be run and deleted; they are deliberately *not* in
 `.claude/agents/` so cloning this repo does not pollute anyone's agent list.
 
-## — the protocols run before the bytes
+## The authoring gate — the protocols run before the bytes
 
 This is house-wide across OpenCnid, and it binds work in this repository
 directly. It is restated here in full because the rule file it comes from lives
