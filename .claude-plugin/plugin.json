@@ -1,0 +1,12 @@
+{
+  "name": "self-play",
+  "description": "Run a clean-room self-play search over a problem space you have not solved yet — an AlphaGo-shaped loop over text where isolated sub-agent players (a blind gatherer, an adversary, a blind evaluator, a blind judge) probe a candidate design and each iteration picks the next variable to vary.",
+  "version": "0.1.0",
+  "author": {
+    "name": "OpenCnid Labs",
+    "url": "https://github.com/OpenCnid"
+  },
+  "homepage": "https://github.com/OpenCnid/self-play",
+  "repository": "https://github.com/OpenCnid/self-play",
+  "license": "CC-BY-4.0"
+}

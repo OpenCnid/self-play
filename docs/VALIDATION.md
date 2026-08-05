@@ -21,7 +21,7 @@ player prompt, every ground block, and every document any player was given.
 ### Target
 
 The rebuilt repository at `github.com/OpenCnid/self-play`, principally
-[`.claude/skills/self-play/SKILL.md`](../.claude/skills/self-play/SKILL.md).
+[`skills/self-play/SKILL.md`](../skills/self-play/SKILL.md).
 
 ### Stated engineering targets
 
@@ -50,7 +50,7 @@ probes. The reader arms are **version A against version B** — the origin skill
 body against the rebuilt one, both shipped artifacts each carrying its own spec.
 **No arm is the skill's absence.** A null baseline is barred here for the reason
 given in
-[`references/measurement-bounds.md`](../.claude/skills/self-play/references/measurement-bounds.md).
+[`references/measurement-bounds.md`](../skills/self-play/references/measurement-bounds.md).
 
 ### Controls
 

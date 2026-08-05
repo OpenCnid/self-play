@@ -8,7 +8,7 @@ something you cannot interpret.
 The exemplar this repository follows keeps its method record beside its findings
 rather than restating its skill body; this file is that record. The disciplines
 are not repeated here. They live in
-[`.claude/skills/self-play/SKILL.md`](../.claude/skills/self-play/SKILL.md) and
+[`skills/self-play/SKILL.md`](../skills/self-play/SKILL.md) and
 are cited by number.
 
 ---
@@ -127,7 +127,7 @@ isolated players, an audit seat — a documented ceremony had all three and had
 its independence ruled unestablishable, because one seat was handed the probe by
 which the composer had already obtained a finding. Handing over the method hands
 over the finding with one step of deniability attached. The full case is in
-[`ground-block-failure.md`](../.claude/skills/self-play/references/ground-block-failure.md).
+[`ground-block-failure.md`](../skills/self-play/references/ground-block-failure.md).
 
 ---
 
