@@ -107,7 +107,11 @@ attestation does not reach back and open it.
   2026-08-01 the vendored copies are LF too, so every count and digest agrees on
   every platform. Use the strict count everywhere so one convention governs.
 
-  **`SKILL.md` currently sits at 19,277 of 19,900 — 623 characters of headroom.**
+  **`SKILL.md` measured 18,518 of 19,900 on 2026-08-05 — 1,382 characters of
+  headroom.** That is a dated reading rather than a standing fact, and it is
+  written that way because the previous line was not: it claimed 19,277 and was
+  wrong by 759 characters, which nothing surfaced because a bare number cannot
+  go stale loudly. Run the command above rather than trusting this sentence.
   Any addition needs a matching removal, and material belongs in `references/`,
   which is never truncated.
 
