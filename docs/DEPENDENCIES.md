@@ -165,7 +165,7 @@ guaranteed to be there.
 
 | Rule | Where it was cited | Disposition here |
 |---|---|---|
-| Measurement doctrine — instructions are specifications; a null needs a discriminating control; correctness is the whole score | § *When to use*, discipline 6, § *The cell that matters* | **Restated in full** at [`.claude/skills/self-play/references/measurement-bounds.md`](../.claude/skills/self-play/references/measurement-bounds.md). That file is what the skill cites. |
+| Measurement doctrine — instructions are specifications; a null needs a discriminating control; correctness is the whole score | § *When to use*, discipline 6, § *The cell that matters* | **Restated in full** at [`skills/self-play/references/measurement-bounds.md`](../skills/self-play/references/measurement-bounds.md). That file is what the skill cites. |
 | The authoring gate — the two protocols run before the bytes | § *House note* | **Restated in full** in [`AGENTS.md`](../AGENTS.md) § *The authoring gate*. It is house-wide, so it binds work in this repository directly. |
 | The positive-control duty — *a null result is meaningless until the experiment has demonstrated it can produce a positive one* | discipline 6 | **Restated verbatim in the discipline itself.** The origin citation is dropped; the sentence is load-bearing and now travels with the rule that uses it. |
 | Ask-the-collaborator — put an underdetermined call to the collaborator rather than settling it with standing configuration | § *The `## Ground` block* | **Restated in full** in the section, with the reason attached. Also carried in [`AGENTS.md`](../AGENTS.md). |

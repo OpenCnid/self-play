@@ -91,7 +91,7 @@ and nothing travels because it is nearby or interesting.
   repair that pointer** — editing a mirror to fix an internal link is exactly the
   edit that would end its byte-identity.
 - **`.claude/rules/prompt-authoring.md`** — the authoring gate, restated in full in
-  [`AGENTS.md`](../../../../AGENTS.md). No claim here cites it by rule number, so
+  [`AGENTS.md`](../../../AGENTS.md). No claim here cites it by rule number, so
   the restatement is sufficient and the bytes are not needed.
 
 **The rule that decided both ways:** a claim that cites a rule *by number* needs

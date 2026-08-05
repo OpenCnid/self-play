@@ -5,7 +5,7 @@ unrelated targets, plus the failures each cost.
 
 Every claim below carries its address, and **every address resolves inside this
 repository.** Each record cited here is mirrored byte-for-byte under
-[`.claude/skills/self-play/references/`](../.claude/skills/self-play/references/),
+[`skills/self-play/references/`](../skills/self-play/references/),
 extracted from the originating repository at commit `07bd744` and verified by
 blob SHA rather than by having been copied. The bytes a claim was written against
 travel with the claim.
@@ -38,14 +38,14 @@ record says, the copy in this repository is the answer — it is the artifact
 pinned to the claim, and the only one guaranteed to still exist.
 
 The disciplines these runs bought are in
-[`.claude/skills/self-play/SKILL.md`](../.claude/skills/self-play/SKILL.md)
+[`skills/self-play/SKILL.md`](../skills/self-play/SKILL.md)
 § *The ten disciplines*.
 
 ---
 
 ## 1. A design keystone fell to an adversarial run — and the composer's own attack did not survive audit
 
-[`references/DOUBTS_WORKSPACE.md`](../.claude/skills/self-play/references/DOUBTS_WORKSPACE.md)
+[`references/DOUBTS_WORKSPACE.md`](../skills/self-play/references/DOUBTS_WORKSPACE.md)
 §11 — dated 2026-07-20. Mirrored from origin path
 `docs/architecture/DOUBTS_WORKSPACE.md` at `07bd744`.
 
@@ -95,9 +95,9 @@ named — a finding about the space, not a verdict on the candidate.
 
 ## 2. A blind evaluator rejected 13 of 14 flat-Earth arguments against a blind-built fact base
 
-[`references/DOUBTS_WORKSPACE.md`](../.claude/skills/self-play/references/DOUBTS_WORKSPACE.md)
+[`references/DOUBTS_WORKSPACE.md`](../skills/self-play/references/DOUBTS_WORKSPACE.md)
 §12.1 — dated 2026-07-20. Corpus retained at
-[`references/earth_figure_factbase.md`](../.claude/skills/self-play/references/earth_figure_factbase.md).
+[`references/earth_figure_factbase.md`](../skills/self-play/references/earth_figure_factbase.md).
 Mirrored from origin paths `docs/architecture/DOUBTS_WORKSPACE.md` and
 `fixtures/doubts_workspace/earth_figure_factbase.md` at `07bd744`.
 
@@ -167,7 +167,7 @@ A citation test would have admitted most of these.
 
 ## 3. A codebase audit found real defects, and a later probe withdrew two of its own findings
 
-[`references/PRIMITIVE_ENCODING_AUDIT.md`](../.claude/skills/self-play/references/PRIMITIVE_ENCODING_AUDIT.md)
+[`references/PRIMITIVE_ENCODING_AUDIT.md`](../skills/self-play/references/PRIMITIVE_ENCODING_AUDIT.md)
 — recorded 2026-07-19; its withdrawals filed 2026-07-20. Mirrored from origin
 path `docs/product/epistemic-support/PRIMITIVE_ENCODING_AUDIT.md` at `07bd744`.
 
@@ -222,7 +222,7 @@ were.
 
 ## 4. A composition ceremony was clean-room validated before it shipped
 
-[`references/COMPLEXITY_CONVOCATION_VALIDATION.md`](../.claude/skills/self-play/references/COMPLEXITY_CONVOCATION_VALIDATION.md)
+[`references/COMPLEXITY_CONVOCATION_VALIDATION.md`](../skills/self-play/references/COMPLEXITY_CONVOCATION_VALIDATION.md)
 — dated 2026-07-20. Eight sub-agent spawns, ≈407k sub-agent tokens. Mirrored from
 origin path `.claude/skills/complexity-convocation/VALIDATION.md` at `07bd744`.
 
@@ -274,7 +274,7 @@ advertisement.
 
 - **No measured claim that a self-play run outperforms an unstructured review.**
   That comparison holds a null arm and is barred as an entailed outcome
-  ([`references/measurement-bounds.md`](../.claude/skills/self-play/references/measurement-bounds.md)).
+  ([`references/measurement-bounds.md`](../skills/self-play/references/measurement-bounds.md)).
   The value of the ceremony is argued from the failures it caught, not measured.
 - **Four runs is four runs.** One program, one house, days apart — and §1 and §2
   are two sections of a single source document, so "four unrelated targets" is

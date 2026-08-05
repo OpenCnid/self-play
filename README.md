@@ -69,7 +69,7 @@ flat-Earth argument.
 ```bash
 git clone https://github.com/OpenCnid/self-play.git
 mkdir -p ~/.claude/skills
-cp -r self-play/.claude/skills/self-play ~/.claude/skills/
+cp -r self-play/skills/self-play ~/.claude/skills/
 ```
 
 **Do not skip the `mkdir`.** If `~/.claude/skills/` does not already exist, `cp`
@@ -82,7 +82,7 @@ PowerShell:
 ```powershell
 git clone https://github.com/OpenCnid/self-play.git
 New-Item -ItemType Directory -Force ~/.claude/skills
-Copy-Item -Recurse -Force self-play/.claude/skills/self-play ~/.claude/skills/
+Copy-Item -Recurse -Force self-play/skills/self-play ~/.claude/skills/
 ```
 
 `-Force` matters on the second run — without it, an upgrade fails with *an item
@@ -190,7 +190,7 @@ search over text is his.
 ## Layout
 
 ```
-.claude/skills/self-play/   the skill — clone, copy, say "red-team this design"
+skills/self-play/           the skill — clone, copy, say "red-team this design"
   references/               material pulled out of the body to keep it loadable
 docs/FINDINGS.md            what four runs of the method established, with addresses
 docs/DEPENDENCIES.md        each dependency, its pin, and what breaks without it

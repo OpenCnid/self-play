@@ -6,7 +6,7 @@
 ## What this repo is
 
 One Claude Code skill —
-[`.claude/skills/self-play/SKILL.md`](.claude/skills/self-play/SKILL.md) — that
+[`skills/self-play/SKILL.md`](skills/self-play/SKILL.md) — that
 runs a clean-room search over a design space you have not solved, plus the
 evidence behind its claims ([docs/FINDINGS.md](docs/FINDINGS.md),
 [docs/VALIDATION.md](docs/VALIDATION.md), [probes/](probes/)) and pinned copies
@@ -77,7 +77,7 @@ attestation does not reach back and open it.
 - **A run's numbers travel with their control state.** A claim whose positive
   control stayed silent publishes as noise, not as a null. The legitimate and
   barred test shapes are in
-  [`references/measurement-bounds.md`](.claude/skills/self-play/references/measurement-bounds.md);
+  [`references/measurement-bounds.md`](skills/self-play/references/measurement-bounds.md);
   read it before designing any measurement here.
 - **No null-baseline arms.** A run comparing this skill against its own absence
   asks a question whose answer follows from what an instruction is. Measure
@@ -99,7 +99,7 @@ attestation does not reach back and open it.
   edit and move material to `references/` rather than trimming the disciplines:
 
   ```bash
-  python -c "import io;print(len(io.open('.claude/skills/self-play/SKILL.md',encoding='utf-8',newline='').read()))"
+  python -c "import io;print(len(io.open('skills/self-play/SKILL.md',encoding='utf-8',newline='').read()))"
   ```
 
   `newline=''` matters: Python's default translates `\r\n` to `\n` and undercounts

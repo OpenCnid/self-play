@@ -10,7 +10,7 @@ piece is absent.
 
 ```bash
 git clone https://github.com/OpenCnid/self-play.git
-cp -r self-play/.claude/skills/self-play ~/.claude/skills/
+cp -r self-play/skills/self-play ~/.claude/skills/
 ```
 
 The skill triggers on its own once installed. Nothing else in this repository
